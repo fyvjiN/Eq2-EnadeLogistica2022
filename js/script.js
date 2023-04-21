@@ -11,12 +11,34 @@ function closeButton() {
     }
 }
 
+var arrAnswers = JSON.parse(localStorage.getItem("arrAnswers"));
+
+var sectionQuestion = document.querySelector(".section-question");
+//for (var i = 0; i < sectionQuestion.length; i++){
+    //var dataId = sectionQuestion.getAttribute('data-id');
+    sectionQuestion.style.background = "blue";
+    var dataId = sectionQuestion.getAttribute("data-id");
+    //alert(dataId);
+//}
+
+
+var numNaoRespondido = localStorage.getItem('numNaoRespondido');
+if (numNaoRespondido === null || numNaoRespondido === 0){
+    numNaoRespondido = 35;
+    console.log(numNaoRespondido);
+}
+
 var numErro = localStorage.getItem('numErro');
+if (numErro === null || numErro === 0) {
+    numErro = 0;
+  }
+
 var numAcerto = localStorage.getItem('numAcerto');
 if (numAcerto === null || numAcerto === 0) {
     numAcerto = 0;
   }
-const respostaArmazenada = localStorage.getItem(window.location.href);
+
+var respostaArmazenada = localStorage.getItem(window.location.href);
 if (respostaArmazenada) {
     const inputResposta = document.querySelector(`input[name=resposta][value=${respostaArmazenada}]`);
     if (inputResposta) {
@@ -41,7 +63,14 @@ function corrigir(){
         if (input.dataset.correct === "true") {
             console.log('pegou o dataset correto');
             respCorreta = input.value;
-            break;
+            //break;
+        }
+
+        if (input.checked) {
+            //alert('entrou no checkedcas');
+            console.log(input.value);
+            arrAnswers[dataId-1] = input.value;
+            localStorage.setItem("arrAnswers", JSON.stringify(arrAnswers));
         }
     }
 
@@ -57,6 +86,9 @@ function corrigir(){
 
         console.log('Entrou no certo!');
         numAcerto++;
+        numNaoRespondido--;
+      
+        localStorage.setItem('numNaoRespondido', numNaoRespondido);
         //armazena o valor de numAcerto incrementado ou não após o botão corrigir.
         localStorage.setItem('numAcerto', numAcerto);
         document.getElementById("pop-certo").style.display = "block";
@@ -64,6 +96,8 @@ function corrigir(){
     } else {
         console.log('Entrou no errado!');
         numErro++;
+        numNaoRespondido--;
+        localStorage.setItem('numNaoRespondido', numNaoRespondido);
         //armazena o valor de numAcerto incrementado ou não após o botão corrigir.
         localStorage.setItem('numErro', numErro);
         document.getElementById("pop-errado").style.display = "block";
