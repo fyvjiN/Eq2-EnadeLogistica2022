@@ -11,6 +11,7 @@ function closeButton() {
     }
 }
 
+var numErro = localStorage.getItem('numErro');
 var numAcerto = localStorage.getItem('numAcerto');
 if (numAcerto === null || numAcerto === 0) {
     numAcerto = 0;
@@ -61,6 +62,10 @@ function corrigir(){
         document.getElementById("pop-certo").style.display = "block";
         
     } else {
+        console.log('Entrou no errado!');
+        numErro++;
+        //armazena o valor de numAcerto incrementado ou não após o botão corrigir.
+        localStorage.setItem('numErro', numErro);
         document.getElementById("pop-errado").style.display = "block";
     }
 
