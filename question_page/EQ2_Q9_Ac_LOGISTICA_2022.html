@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enade - Tecnologia em Logística 2022</title>
+
+    <!-- icone usado no-->
+    <Link Rel="Icon" Href="http://enade.inep.gov.br/enade/favicon.ico" />
+
+
+    <!-- ícons facebook zap instagram -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--links envolvendo pagina de estilos usados na pagina index.html-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/resetcss.min.css">-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/questao.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="#"><img src="../css/images/logo-inep-br.png" width="100"></a> Enade</div>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../homepage/index.html">Início</a></li>
+                <li><a href="../homepage/sobre.html">Sobre</a></li>
+                <li><a href="../homepage/creditos.html">Créditos</a></li>
+                <script src="../js/script.js" type="text/javascript"></script>
+                <script src="../js/counter.js" defer type="text/javascript"></script>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="pop-errado">
+            <div class="close-pop">
+                <button type="button" class="close-pop" onclick="closeButton()">X</button>
+            </div>
+            <div class="imagem-pop">
+                <!--<img src="img/errado.png" width="30px" alt="">-->
+            </div>
+            <div class="paragrafo-pop">
+                <p class="correct-wrong"><b>OPS, VOCÊ ERROU!</b></p>
+                <p id="errada">Trocar Texto</p>
+            </div>
+        </div>
+        <div id="pop-certo">
+            <div class="close-pop">
+                <button type="button" class="close-pop" onclick="closeButton()">X</button>
+            </div>
+            <div class="imagem-pop">
+                <!--<img src="img/certo.png" width="30px" alt="">-->
+            </div>
+            <div class="paragrafo-pop">
+                <p class="correct-wrong"><b>UAU, VOCÊ ACERTOU!!</b></p>
+                <p id="correta">Trocar Texto</p>
+            </div>
+        </div>
+        <!--<form>-->
+            <div class="section-question">
+                <h1>Questão 9</h1>
+                <div class="btn-group-1">
+                    <button class="btn-question">Menu</button>
+                    <button class="btn-question" onclick="window.location.href='../homepage/resultado.html'" id="btn-finalizar">Finalizar Prova</button>
+                </div>
+                <div class="body-question">
+                    <p>O sistema produtivo pode ser definido por metas e estratégias; faz-se necessário formular planos para atingi-las e administrar os recursos humanos e físicos. Essas atividades são desenvolvidas pelo Planejamento e Controle da Produção (PCP) e exercidas em três níveis hierárquicos de planejamento e controle das atividades produtivas.
+                    </p>
+                    <blockquote><small>TUBINO, D. F. Planejamento e controle da produção: teoria e prática. 3. ed. São Paulo: Atlas, 2017 (adaptado).
+                    </small></blockquote>
+                    <p>Considerando o texto, avalie as afirmações a seguir.</p>
+                    <ol type="I">
+                        <li><p>No nível operacional, o PCP prepara a Programação da Produção a curto prazo.</p></li>
+                        <li><p>No nível estratégico, são definidas as políticas de médio prazo.</p></li>
+                        <li><p>No nível tático, são estabelecidos planos de longo prazo.</p></li>
+                        <li><p>No nível tático, é obtido o Plano Mestre da Produção.</p></li>
+                    </ol>
+                    <p>É correto apenas o que se afirma em</p>
+                </div>
+                <div class="respostas">
+                    <ul class="ul_respostas">
+                        <li>
+                            <input id="altA" type="radio" name="resposta" value="A">
+                            <label for="Aa">A) I.</label>
+                        </li>
+                        <li>
+                            <input id="altB" type="radio" name="resposta" value="B">
+                            <label for="Ab">B) III.</label>
+                        </li>
+                        <li>
+                            <input id="altC" type="radio" name="resposta" id="alt-correta" value="C" data-correct="true">
+                            <label for="Ac">C) I e IV.</label>
+                        </li>
+                        <li>
+                            <input id="altD" type="radio" name="resposta" value="D">
+                            <label for="Ad">D) II e III.</label>
+                        </li>
+                        <li>
+                            <input id="altE" type="radio" name="resposta" value="E">
+                            <label for="Ae">E) II e IV.</label>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="btn-group-2">
+                        <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q8_Ac_LOGISTICA_2022.html'">Questão Anterior</button>
+                        <button class="btn-question" onclick="corrigir()" id="btn-corrigir">Corrigir Questão</button>
+                        <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q10_Ad_LOGISTICA_2022.html'">Próxima Questão</button>
+                    </div>
+                </div>
+            <!--</form>-->
+        </main>
+        <footer>
+            <div id="footer-content">
+                <div id="footer-logos">
+                    <ul class="footer-list">
+                        <li class="footer-item"><a href="https://www.gov.br/inep/pt-br" target="_blank"
+                                class="footer-link"><img src="../css/images/ofc_logo_inep.svg" width="100"></a></li>
+                        <li class="footer-item"><a href="https://www.cps.sp.gov.br/" target="_blank"
+                                class="footer-link"><img src="../css/images/cps-white.png" width="100"></a></li>
+                        <li class="footer-item"><a href="https://www.saopaulo.sp.gov.br/" target="_blank"
+                                class="footer-link"><img src="../css/images/govsp-logo.png" width="120"></a></li>
+                        <li class="footer-item"><a
+                                href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/"
+                                target="_blank" class="footer-link"><img src="../css/images/ads-logo.png" width="160"></a>
+                        </li>
+                        <li class="footer-item"><a href="http://www.fateccarapicuiba.edu.br/" target="_blank"
+                                class="footer-link"><img src="../css/images/logo-fatec-original.png" width="140"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-copyright">
+                Todos os direitos reservados<b> &#169 2023 FATEC - Carapicuíba</b>
+            </div>
+        </footer>
+        <script src="../js/navbar.js"></script>
+        <script src="../js/script.js" type="text/javascript"></script>
+        <script src="../js/counter.js" defer type="text/javascript"></script>
+    </body>
+</html>
