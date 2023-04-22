@@ -117,7 +117,6 @@ if (respostaArmazenada) {
         for (let i = 0; i < radioInputs.length; i++) {
             radioInputs[i].disabled = true;
         }
-        alert("desabilitou tudo pq achou veio");
     }
 }
 
@@ -189,12 +188,16 @@ function corrigir(){
 
 //função dedicada para a página de resultado, contendo a lógica do número de acertos e erros da prova online.
 function resultado(){
+
+    var numAcerto = localStorage.getItem('numAcerto');
+    var numErro = localStorage.getItem('numErro');
+    var numNaoRespondido = localStorage.getItem('numNaoRespondido');
     console.log('abriu resultado!!!1');
-    var numErro = 35 - numAcerto;
-    document.getElementById("acertos").innerHTML = `Seus acertos: <b>${numAcerto}</b> / 35` // Aqui ira apresentar o resultado mostrando a quantidade de acertos
+    document.getElementById("acertos").innerHTML = `Seus acertos: <b>${numAcerto}</b> / 35`; // Aqui ira apresentar o resultado mostrando a quantidade de acertos
     // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
-    document.getElementById("erros").innerHTML = `Seus erros: <b>${numErro}</b> / 35` // Aqui ira apresentar o resultado mostrando a quantidade de acertos
+    document.getElementById("erros").innerHTML = `Seus erros: <b>${numErro}</b> / 35`; // Aqui ira apresentar o resultado mostrando a quantidade de acertos
     // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
+    document.getElementById("nao-respondidas").innerHTML = `Questões não respondidas: <b>${numNaoRespondido}</b> / 35`;
 }
 
 //função que ira limpar todos os dados da sessão local, reiniciando o conteúdo do teste e suas alternativas selecionadas. Alem disso, redireciona para a pagina de instrucao
