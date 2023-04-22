@@ -66,8 +66,6 @@ main{
     margin: 0 auto 2rem;
     padding: 2rem;
     z-index: 99;
-    background-color: rgba(39, 41, 42, 0.333);
-    box-shadow: 0px 0px 3px 1px rgba(149, 255, 141, 1);
 }
 
 #pop-overlay2{
@@ -81,8 +79,6 @@ main{
     margin: 0 auto 2rem;
     padding: 2rem;
     z-index: 99;
-    background-color: rgba(39, 41, 42, 0.333);
-    box-shadow: 0px 0px 3px 1px rgba(149, 255, 141, 1);
 }
 
 /* Configurações do Pop Up - Certo */
@@ -104,6 +100,7 @@ main{
 #pop-overlay2 #pop-certo p {
   text-align: center;
 }
+
 /* Configurações do Pop Up - Errado */
 #pop-overlay1 #pop-errado {
   display: block;
@@ -122,6 +119,24 @@ main{
 
 #pop-overlay1 #pop-errado p {
   text-align: center;
+}
+
+.close-pop {
+  padding: 0;
+  margin: 0;
+}
+
+.close-pop button {
+  width: 50px;
+  height: 50px;
+  border-radius: 0px 0px 20px 0px;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.close-pop button:hover {
+  opacity: 0.5;
 }
 
 .section-question {
