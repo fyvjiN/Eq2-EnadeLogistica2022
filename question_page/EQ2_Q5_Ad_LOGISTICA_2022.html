@@ -25,6 +25,8 @@
     <!--<link rel="stylesheet" type="text/css" href="../css/resetcss.min.css">-->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/questao.css">
+    <!--script para gráficos gerados pelo chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -54,7 +56,9 @@
                 </div>
                 <div class="paragrafo-pop">
                     <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
-                    <p id="errada">Trocar Texto</p>
+                    <div id="chart-container2">
+                        <canvas id="bar-chart2"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,7 +73,9 @@
                 </div>
                 <div class="paragrafo-pop">
                     <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
-                    <p id="correta">Trocar Texto</p>
+                    <div id="chart-container">
+                        <canvas id="bar-chart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,5 +153,6 @@
         </footer>
         <script src="../js/navbar.js"></script>
         <script src="../js/script.js" type="text/javascript"></script>
+        <script src="../js/chart.js"></script>
     </body>
 </html>

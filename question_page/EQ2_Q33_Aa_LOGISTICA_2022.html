@@ -25,6 +25,8 @@
     <!--<link rel="stylesheet" type="text/css" href="../css/resetcss.min.css">-->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/questao.css">
+    <!--script para gráficos gerados pelo chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -54,7 +56,9 @@
                 </div>
                 <div class="paragrafo-pop">
                     <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
-                    <p id="errada">Trocar Texto</p>
+                    <div id="chart-container2">
+                        <canvas id="bar-chart2"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,7 +73,9 @@
                 </div>
                 <div class="paragrafo-pop">
                     <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
-                    <p id="correta">Trocar Texto</p>
+                    <div id="chart-container">
+                        <canvas id="bar-chart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,9 +105,9 @@
                     <p>Com base no texto, analise as asserções a seguir 
                         e a relação proposta entre elas.</p>
 
-                        <ol type="I">
+                        <ul>
                             <li><p>
-                                Com o omnichannel, é possível sincronizar 
+                                I. Com o omnichannel, é possível sincronizar 
                                 estoques entre lojas físicas e virtuais, 
                                 comprar no site e retirar na loja, comprar no 
                                 website, trocar ou devolver na loja, comprar 
@@ -111,14 +117,14 @@
                                 <strong><p text-align:center;>PORQUE</p></strong>
 
                             <li><p>
-                                O <em>omnichannel</em> utiliza ferramentas 
+                                II. O <em>omnichannel</em> utiliza ferramentas 
                                 tecnológicas como cloud computing e 
                                 business intelligence para integralizar 
                                 estoques, atualizar em tempo real as 
                                 informações dos pedidos e oferecer maior 
                                 exatidão sobre o percurso de entrega 
                                 dos itens.</p></li>
-                        </ol>
+                        </ul>
                         
                         <p>A respeito dessas asserções, assinale a opção correta.</p>
 
@@ -191,5 +197,6 @@
         </footer>
         <script src="../js/navbar.js"></script>
         <script src="../js/script.js" type="text/javascript"></script>
+        <script src="../js/chart.js"></script>
     </body>
 </html>

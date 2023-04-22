@@ -25,6 +25,8 @@
     <!--<link rel="stylesheet" type="text/css" href="../css/resetcss.min.css">-->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/questao.css">
+    <!--script para gráficos gerados pelo chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -54,7 +56,9 @@
                 </div>
                 <div class="paragrafo-pop">
                     <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
-                    <p id="errada">Trocar Texto</p>
+                    <div id="chart-container2">
+                        <canvas id="bar-chart2"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,7 +73,9 @@
                 </div>
                 <div class="paragrafo-pop">
                     <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
-                    <p id="correta">Trocar Texto</p>
+                    <div id="chart-container">
+                        <canvas id="bar-chart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,34 +111,34 @@
 
                     <p>Nesse contexto, avalie as afirmações a seguir.</p>
 
-                        <ol type="I">
+                        <ul>
                             <li><p>
-                                O gerenciamento do last mile pode
+                                I. O gerenciamento do last mile pode
                                 contribuir para elevar a competividade,
                                 proporcionar ganhos de escala e reduzir os
                                 custos logísticos.</p></li>
 
                             <li><p>
-                                Os objetivos das empresas do ramo varejista
+                                II. Os objetivos das empresas do ramo varejista
                                 são: elevar a satisfação dos clientes,
                                 melhorar o atendimento e aumentar o
                                 tempo de responsividade.</p></li>
 
                             <li><p>
-                                A rede transportadora, ao utilizar a
+                                III. A rede transportadora, ao utilizar a
                                 agregação de entrega, aumenta o custo de
                                 transporte e facilita a coordenação de rotas
                                 e cronogramas.
                             </p></li>
 
                             <li><p>
-                                A rede transportadora, ao utilizar a
+                                IV. A rede transportadora, ao utilizar a
                                 agregação de entrega, aumenta o custo de
                                 transporte e facilita a coordenação de rotas
                                 e cronogramas.
                             </p></li>
 
-                        </ol>
+                        </ul>
                         
                         <p>É correto apenas o que se afirma em</p>
 
@@ -200,5 +206,6 @@
         </footer>
         <script src="../js/navbar.js"></script>
         <script src="../js/script.js" type="text/javascript"></script>
+        <script src="../js/chart.js"></script>
     </body>
 </html>
