@@ -25,6 +25,8 @@
     <!--<link rel="stylesheet" type="text/css" href="../css/resetcss.min.css">-->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/resultado.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body onload="resultado()">
@@ -54,28 +56,18 @@
                 <p id="nao-respondidas">Número de Erros: 0/35</p>
 
             </div>
-            <div class="graficos">
-                <table>
-                    <thead>
-                        <tr>Número da Questão</tr>
-                        <tr>Status da Questão</tr>
-                    </thead>
-                        <tr>
-                            <td>1</td>
-                            <td>Errou</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Errou</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Errou</td>
-                        </tr>
-                </table>
-            </div>
+            <!--<div class="graficos">-->
+                <div id="chart-container">
+                    <canvas id="bar-chart"></canvas>
+                </div>
+                <!--
+                <div id="chart-container">
+                    <canvas id="bar-chart-questoes-respondidas"></canvas>
+                </div>
+            -->
+           <!-- </div>-->
             <div class="button"> 
-                <a href="../question_page/EQ2_Q1_Ab_LOGISTICA_2022.html"><button class="btn-prox" onclick="reiniciarProva()">Recomeçar</button></a>  
+                <button class="btn-prox" onclick="reiniciarProva()">Recomeçar</button>
                 <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2022_GB_tecnologia_em_logistica.pdf" target="_blank"><button class="btn-prox" onclick="reset()">Gabarito</button></a>    
             </div>
         </div>
@@ -104,6 +96,7 @@
     </footer>
     <script src="../js/navbar.js"></script>
     <script src="../js/script.js" type="text/javascript"></script>
+    <script src="../js/chart.js"></script>
 </body>
 
 </html>

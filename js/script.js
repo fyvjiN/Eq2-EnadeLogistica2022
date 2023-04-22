@@ -92,7 +92,7 @@ var dataId = sectionQuestion.getAttribute("data-id");
 
 
 var numNaoRespondido = localStorage.getItem('numNaoRespondido');
-if (numNaoRespondido === null || numNaoRespondido === 0){
+if (numNaoRespondido === null || numNaoRespondido === 0 || numNaoRespondido === -1){
     numNaoRespondido = 35;
     console.log(numNaoRespondido);
 }
@@ -117,6 +117,8 @@ if (respostaArmazenada) {
         for (let i = 0; i < radioInputs.length; i++) {
             radioInputs[i].disabled = true;
         }
+        // desabilitar o botão corrigir
+        document.getElementById("btn-corrigir").disabled = true;
     }
 }
 
@@ -147,7 +149,7 @@ function corrigir(){
     var respostaCorreta = document.getElementById("correta");
     var respostaErrada = document.getElementById("errada");
     if (!respSelecionada) {
-        alert("Selecione uma resposta antes de corrigir a questão.");
+        alert("Você não selecionou nenhuma alternativa. Não há como corrigir a questão!");
         return;
     }
 
@@ -193,16 +195,36 @@ function resultado(){
     var numErro = localStorage.getItem('numErro');
     var numNaoRespondido = localStorage.getItem('numNaoRespondido');
     console.log('abriu resultado!!!1');
-    document.getElementById("acertos").innerHTML = `Seus acertos: <b>${numAcerto}</b> / 35`; // Aqui ira apresentar o resultado mostrando a quantidade de acertos
-    // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
-    document.getElementById("erros").innerHTML = `Seus erros: <b>${numErro}</b> / 35`; // Aqui ira apresentar o resultado mostrando a quantidade de acertos
-    // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
-    document.getElementById("nao-respondidas").innerHTML = `Questões não respondidas: <b>${numNaoRespondido}</b> / 35`;
+
+    if (numAcerto == null){
+        // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
+        document.getElementById("nao-respondidas").innerHTML = `Seus acertos: <b>0</b> / 35`;
+    } else {
+        document.getElementById("acertos").innerHTML = `Seus acertos: <b>${numAcerto}</b> / 35`; // Aqui ira apresentar o resultado mostrando a quantidade de acertos
+    }
+  
+    if (numErro == null){
+        document.getElementById("erros").innerHTML = `Seus erros: <b>0</b> / 35`; // Aqui ira apresentar o resultado mostrando a quantidade de acertos
+    } else {
+        // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
+        document.getElementById("erros").innerHTML = `Seus erros: <b>${numErro}</b> / 35`; // Aqui ira apresentar o resultado mostrando a quantidade de acertos
+    }
+
+    if (numNaoRespondido == null){
+        document.getElementById("nao-respondidas").innerHTML = `Questões não respondidas: <b>35</b> / 35`;
+    } else {
+        // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
+        document.getElementById("nao-respondidas").innerHTML = `Questões não respondidas: <b>${numNaoRespondido}</b> / 35`;
+    }
+
+
 }
 
 //função que ira limpar todos os dados da sessão local, reiniciando o conteúdo do teste e suas alternativas selecionadas. Alem disso, redireciona para a pagina de instrucao
 function reiniciarProva(){
     console.log('entrou no resetar');
+    alert('entrou');
     localStorage.clear();
-    window.href.location = "homepage/instrução.html";
+    sessionStorage.clear();
+    window.location.href = "instrucao.html";
 }
