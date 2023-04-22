@@ -46,28 +46,33 @@
         </nav>
     </header>
     <main>
-        <div id="pop-errado">
-            <div class="close-pop">
-                <button type="button" class="close-pop" onclick="closeButton()">X</button>
-            </div>
-            <div class="imagem-pop">
-                <!--<img src="img/errado.png" width="30px" alt="">-->
-            </div>
-            <div class="paragrafo-pop">
-                <p class="correct-wrong"><b>OPS, VOCÊ ERROU!</b></p>
-                <p id="errada">Trocar Texto</p>
+        <div id="pop-overlay1">
+            <div id="pop-errado">
+                <div class="close-pop">
+                    <button type="button" class="close-pop" onclick="closeButton()">X</button>
+                </div>
+                <div class="imagem-pop">
+                    <!--<img src="img/errado.png" width="30px" alt="">-->
+                </div>
+                <div class="paragrafo-pop">
+                    <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
+                    <p id="errada">Trocar Texto</p>
+                </div>
             </div>
         </div>
-        <div id="pop-certo">
-            <div class="close-pop">
-                <button type="button" class="close-pop" onclick="closeButton()">X</button>
-            </div>
-            <div class="imagem-pop">
-                <!--<img src="img/certo.png" width="30px" alt="">-->
-            </div>
-            <div class="paragrafo-pop">
-                <p class="correct-wrong"><b>UAU, VOCÊ ACERTOU!!</b></p>
-                <p id="correta">Trocar Texto</p>
+
+        <div id="pop-overlay2">
+            <div id="pop-certo">
+                <div class="close-pop">
+                    <button type="button" class="close-pop" onclick="closeButton()">X</button>
+                </div>
+                <div class="imagem-pop">
+                    <!--<img src="img/certo.png" width="30px" alt="">-->
+                </div>
+                <div class="paragrafo-pop">
+                    <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
+                    <p id="correta">Trocar Texto</p>
+                </div>
             </div>
         </div>
         <!--<form>-->

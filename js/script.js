@@ -3,13 +3,16 @@ function closeButton() {
     var btn = document.getElementsByClassName("close-pop")
     var popCerto = document.getElementById("pop-certo");
     var popErrado = document.getElementById("pop-errado");
+    var popOverlay1 = document.getElementById("pop-overlay1");
+    var popOverlay2 = document.getElementById("pop-overlay2")
 
     if(btn[0]) {
-        popErrado.style.display = "none";
+        popOverlay1.style.display = "none";
     }if(btn[1]) {
-        popCerto.style.display = "none";
+        popOverlay2.style.display = "none";
     }
 }
+
 
 
 let menuCriado = false;
@@ -160,7 +163,7 @@ function corrigir(){
         localStorage.setItem('numNaoRespondido', numNaoRespondido);
         //armazena o valor de numAcerto incrementado ou não após o botão corrigir.
         localStorage.setItem('numAcerto', numAcerto);
-        document.getElementById("pop-certo").style.display = "block";
+        document.getElementById("pop-overlay2").style.display = "block";
         
     } else {
         console.log('Entrou no errado!');
@@ -169,7 +172,7 @@ function corrigir(){
         localStorage.setItem('numNaoRespondido', numNaoRespondido);
         //armazena o valor de numAcerto incrementado ou não após o botão corrigir.
         localStorage.setItem('numErro', numErro);
-        document.getElementById("pop-errado").style.display = "block";
+        document.getElementById("pop-overlay1").style.display = "block";
     }
 
     //desabilitar todas as opções da questão
