@@ -12,6 +12,11 @@ main{
     /*padding: 50px 50px;*/
   }  
 
+.conteudo img {
+  padding: 40px;
+  width: 700px;
+}
+
 .conteudo button{
     border: 2px solid var(--light-blue);
     margin: 30px 30px;

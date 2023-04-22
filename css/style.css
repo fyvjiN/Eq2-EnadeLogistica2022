@@ -98,7 +98,7 @@ nav {
   -moz-box-shadow: 1px -1px 110px -5px rgba(0,0,0,0.34);
   /*position: relative;*/
   position: fixed;
-  z-index: 50;
+  z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: center;

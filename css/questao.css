@@ -66,7 +66,7 @@ main{
     margin: 0 auto 2rem;
     padding: 2rem;
     background-color: rgba(39, 41, 42, 0.333); /Define a cor de fundo do elemento/
-    z-index: 99;
+    z-index: 97;
 }
 
 #pop-overlay2{
@@ -80,7 +80,7 @@ main{
     margin: 0 auto 2rem;
     padding: 2rem;
     background-color: rgba(39, 41, 42, 0.333); /Define a cor de fundo do elemento/
-    z-index: 99;
+    z-index: 95;
 }
 
 /* Configurações do Pop Up - Certo */
