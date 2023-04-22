@@ -19,7 +19,7 @@ main{
   left: 50%;
   transform: translate(-50%, -50%);
   height: 30vh;
-  width: 30%;
+  width: 35%;
   bottom: 32%;
   z-index: 30;
   font-size: 1.6rem;
@@ -42,16 +42,16 @@ main{
 
 .menu-navegacao li {
   margin: 5px;
-  background-color: var(--color-blue-01);
 }
 
 .menu-navegacao a {
   color: var(--white-01);
-  font-size: 2rem;
+  font-size: 3rem;
   transition: 0.3s ease;
 }
 
 .menu-navegacao a:hover{
+  font-size: 4rem;
   color: var(--light-blue);
 }
 
@@ -263,7 +263,7 @@ main{
   /* Estrutura menu navegação*/
   .menu-navegacao{
 
-    height: 30vh;
+    height: 50vh;
     width: 75%;
     bottom: 32%;
 
