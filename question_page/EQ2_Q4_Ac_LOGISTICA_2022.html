@@ -1,81 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Enade - Tecnologia em Logística 2022</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enade - Tecnologia em Logística 2022</title>
-
-    <!-- icone usado no-->
-    <Link Rel="Icon" Href="http://enade.inep.gov.br/enade/favicon.ico" />
+        <!-- icone usado no-->
+        <Link Rel="Icon" Href="http://enade.inep.gov.br/enade/favicon.ico" />
 
 
-    <!-- ícons facebook zap instagram -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- ícons facebook zap instagram -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Fontes Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Fontes Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!--links envolvendo pagina de estilos usados na pagina index.html-->
-    <!--<link rel="stylesheet" type="text/css" href="../css/resetcss.min.css">-->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/questao.css">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <div class="logo"><a href="#"><img src="../css/images/logo-inep-br.png" width="100"></a> Enade</div>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-list">
-                <li><a href="../homepage/index.html">Início</a></li>
-                <li><a href="../homepage/sobre.html">Sobre</a></li>
-                <li><a href="../homepage/creditos.html">Créditos</a></li>
-                <script src="../js/script.js" type="text/javascript"></script>
-                <script src="../js/counter.js" defer type="text/javascript"></script>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div id="pop-overlay1">
-            <div id="pop-errado">
-                <div class="close-pop">
-                    <button type="button" class="close-pop" onclick="closeButton()">X</button>
+        <!--links envolvendo pagina de estilos usados na pagina index.html-->
+        <!--<link rel="stylesheet" type="text/css" href="../css/resetcss.min.css">-->
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/questao.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo"><a href="#"><img src="../css/images/logo-inep-br.png" width="100"></a> Enade</div>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
-                <div class="imagem-pop">
-                    <!--<img src="img/errado.png" width="30px" alt="">-->
-                </div>
-                <div class="paragrafo-pop">
-                    <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
-                    <p id="errada">Trocar Texto</p>
+                <ul class="nav-list">
+                    <li><a href="../homepage/index.html">Início</a></li>
+                    <li><a href="../homepage/sobre.html">Sobre</a></li>
+                    <li><a href="../homepage/creditos.html">Créditos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="pop-overlay1">
+                <div id="pop-errado">
+                    <div class="close-pop">
+                        <button type="button" class="close-pop" onclick="closeButton()">X</button>
+                    </div>
+                    <div class="imagem-pop">
+                        <!--<img src="img/errado.png" width="30px" alt="">-->
+                    </div>
+                    <div class="paragrafo-pop">
+                        <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
+                        <p id="errada">Trocar Texto</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div id="pop-overlay2">
-            <div id="pop-certo">
-                <div class="close-pop">
-                    <button type="button" class="close-pop" onclick="closeButton()">X</button>
-                </div>
-                <div class="imagem-pop">
-                    <!--<img src="img/certo.png" width="30px" alt="">-->
-                </div>
-                <div class="paragrafo-pop">
-                    <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
-                    <p id="correta">Trocar Texto</p>
+            <div id="pop-overlay2">
+                <div id="pop-certo">
+                    <div class="close-pop">
+                        <button type="button" class="close-pop" onclick="closeButton()">X</button>
+                    </div>
+                    <div class="imagem-pop">
+                        <!--<img src="img/certo.png" width="30px" alt="">-->
+                    </div>
+                    <div class="paragrafo-pop">
+                        <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
+                        <p id="correta">Trocar Texto</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--<form>-->
             <div class="section-question" data-id="4">
                 <h1>Questão 4</h1>
                 <div class="btn-group-1">
@@ -88,33 +82,27 @@
                     <h2>TEXTO 1</h2>
                     <p>Além de tramitar no Judiciário um processo a respeito do Marco Temporal, há também, na Câmara dos Deputados, um projeto em que se tenta transformar a tese do Marco Temporal em lei. Trata-se do Projeto de Lei n. 490/2007, que determina que devem ter direito às terras consideradas ancestrais somente os povos que as estivessem ocupando no dia da promulgação da Constituição Federal, em 5 de outubro de 1988.</p>
                     <blockquote><small>Disponível em: https://g1.globo.com. Acesso em: 21 jun. 2022 (adaptado).</small></blockquote>
-
                     <p>Considerando as informações apresentadas, avalie as asserções a seguir e a relação proposta entre elas.</p>
-    
                     <h2>TEXTO 2</h2>
-
                     <p>O assassinato do indigenista Bruno Pereira e do jornalista Dom Phillips expôs ao mundo a importância da demarcação dos territórios indígenas, assegurada pela Constituição Federal de 1988. Os territórios indígenas, além de preservarem identidades, modos de vida, tradições e culturas desses povos, também são fundamentais para a preservação ambiental. Eles contribuem para conter as emissões de gases de efeito estufa, promover a biodiversidade e potencializar sistemas.</p>
-
                     <p>Se mantido o critério do Marco Temporal, a guerra fundiária poderá ser intensificada. Os territórios se tornarão zonas de mais conflitos entre fazendeiros, mineradores, garimpeiros, grileiros, produtores rurais, narcotraficantes, comerciantes de peixes, caçadores e madeireiros, o que resultará na morte de indígenas e de defensores da floresta e, por extensão, dos territórios indígenas.</p>
-
                     <p>Com base nos textos e na imagem apresentados, avalie as afirmações a seguir.
-
-                    <ol type="I">
-                        <li><p>Os territórios indígenas, com a regulamentação do Marco Temporal, ficarão formalmente protegidos de invasões, e os povos originários poderão manter suas tradições culturais.   
-                        </p></li>
-                        
-                        <li><p>As ações de grupos de garimpeiros, de pescadores ilegais, de desmatadores e de alguns setores das atividades agropecuárias vêm confrontando os povos originários em disputas territoriais.                           
-                        </p></li>
-
-                        <li><p>O aumento da criminalidade nos territórios indígenas está associado aos interesses econômicos de exploração insustentável do meio ambiente, como os relacionados aos garimpos ilegais e ao desmatamento de florestas.
+                    <ul>
+                        <li><p>I. Os territórios indígenas, com a regulamentação do Marco Temporal, ficarão formalmente protegidos de invasões, e os povos originários poderão manter suas tradições culturais.   
+                            </p></li>
+                    
+                        <li><p>II. As ações de grupos de garimpeiros, de pescadores ilegais, de desmatadores e de alguns setores das atividades agropecuárias vêm confrontando os povos originários em disputas territoriais.                           
                         </p></li>
 
-                        <li><p>A existência dos movimentos sociais indígenas é essencial para a luta por direitos sociais, culturais e de acesso à terra pelos povos originários, assim como para a preservação do meio ambiente e do modo de vida dos indígenas.
+                        <li><p>III. O aumento da criminalidade nos territórios indígenas está associado aos interesses econômicos de exploração insustentável do meio ambiente, como os relacionados aos garimpos ilegais e ao desmatamento de florestas.
                         </p></li>
 
-                        <li><p>O Estado brasileiro está impedido de intervir nas demarcações de territórios indígenas, em respeito à autonomia, à autogestão e à livre determinação dos povos originários, segundo a Constituição Federal de 1988.     
+                        <li><p>IV. A existência dos movimentos sociais indígenas é essencial para a luta por direitos sociais, culturais e de acesso à terra pelos povos originários, assim como para a preservação do meio ambiente e do modo de vida dos indígenas.
                         </p></li>
-                    </ol>
+
+                        <li><p>V. O Estado brasileiro está impedido de intervir nas demarcações de territórios indígenas, em respeito à autonomia, à autogestão e à livre determinação dos povos originários, segundo a Constituição Federal de 1988.     
+                        </p></li>
+                    </ul>
                     <p>É correto apenas o que se afirma em</p>
                 </div>
                 <div class="respostas">
@@ -139,15 +127,14 @@
                             <input id="altE" type="radio" name="resposta" value="E">
                             <label for="Ae">E) I, II, III e IV.</label>
                         </li>
-                        </ul>
-                    </div>
-                    <div class="btn-group-2">
-                        <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q3_Aa_LOGISTICA_2022.html'">Questão Anterior</button>
-                        <button class="btn-question" onclick="corrigir()" id="btn-corrigir">Corrigir Questão</button>
-                        <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q5_Ad_LOGISTICA_2022.html'">Próxima Questão</button>
-                    </div>
+                    </ul>
                 </div>
-            <!--</form>-->
+                <div class="btn-group-2">
+                    <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q3_Aa_LOGISTICA_2022.html'">Questão Anterior</button>
+                    <button class="btn-question" onclick="corrigir()" id="btn-corrigir">Corrigir Questão</button>
+                    <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q5_Ad_LOGISTICA_2022.html'">Próxima Questão</button>
+                </div>
+            </div>
         </main>
         <footer>
             <div id="footer-content">

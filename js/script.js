@@ -13,10 +13,7 @@ function closeButton() {
     }
 }
 
-
-
-let menuCriado = false;
-
+var menuCriado = false;
 //Função que constroi o menu de navegação ao apertar o botão menu na página
 function abrirMenuNavegacao() {
     //alert("bungas");
@@ -46,7 +43,7 @@ function abrirMenuNavegacao() {
             '../question_page/EQ2_Q20_Ab_LOGISTICA_2022.html',
             '../question_page/EQ2_Q21_Ae_LOGISTICA_2022.html', 
             '../question_page/EQ2_Q22_Ac_LOGISTICA_2022.html', 
-            '../question_page/EQ2_Q23_Ad_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q23_Ac_LOGISTICA_2022.html', 
             '../question_page/EQ2_Q24_Ad_LOGISTICA_2022.html',
             '../question_page/EQ2_Q25_Ae_LOGISTICA_2022.html',
             '../question_page/EQ2_Q26_Ad_LOGISTICA_2022.html',
@@ -80,7 +77,7 @@ function abrirMenuNavegacao() {
         // Adiciona o menu à página
         document.body.appendChild(menu);
     }
-  }
+}
 
 var arrAnswers = JSON.parse(localStorage.getItem("arrAnswers"));
 
@@ -120,6 +117,7 @@ if (respostaArmazenada) {
         for (let i = 0; i < radioInputs.length; i++) {
             radioInputs[i].disabled = true;
         }
+        alert("desabilitou tudo pq achou veio");
     }
 }
 
