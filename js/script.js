@@ -11,13 +11,82 @@ function closeButton() {
     }
 }
 
+
+let menuCriado = false;
+
+//Função que constroi o menu de navegação ao apertar o botão menu na página
+function abrirMenuNavegacao() {
+    //alert("bungas");
+    if(!menuCriado){
+
+        menuCriado = true;
+        const links = [
+            '../question_page/EQ2_Q1_Ab_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q2_Ad_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q3_Aa_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q4_Ac_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q5_Ad_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q6_Ae_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q7_Ad_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q8_Ac_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q9_Ac_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q10_Ad_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q11_Aa_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q12_Aa_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q13_Ad_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q14_Ab_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q15_Ae_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q16_Ac_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q17_Ae_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q18_Ac_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q19_Ab_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q20_Ab_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q21_Ae_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q22_Ac_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q23_Ad_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q24_Ad_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q25_Ae_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q26_Ad_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q27_Ad_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q28_Aa_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q29_Ab_LOGISTICA_2022_INCOMPLETO.html',
+            '../question_page/EQ2_Q30_Ab_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q31_Aa_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q32_Ae_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q33_Aa_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q34_Ad_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q35_Ab_LOGISTICA_2022.html'
+
+        ]; // adicione os links que você precisa aqui
+        const menu = document.createElement('div');
+        menu.classList.add('menu-navegacao');
+        const lista = document.createElement('ul');
+      
+        for (let i = 0; i < links.length; i++) {
+          const item = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = links[i];
+          link.textContent = (i + 1).toString(); // use i + 1 para criar os números de menu sequenciais
+          item.appendChild(link);
+          lista.appendChild(item);
+        }
+    
+        // Adiciona a lista ao menu
+        menu.appendChild(lista);
+    
+        // Adiciona o menu à página
+        document.body.appendChild(menu);
+    }
+  }
+
 var arrAnswers = JSON.parse(localStorage.getItem("arrAnswers"));
 
 var sectionQuestion = document.querySelector(".section-question");
+var dataId = sectionQuestion.getAttribute("data-id");
 //for (var i = 0; i < sectionQuestion.length; i++){
     //var dataId = sectionQuestion.getAttribute('data-id');
-    sectionQuestion.style.background = "blue";
-    var dataId = sectionQuestion.getAttribute("data-id");
+    //sectionQuestion.style.background = "blue";
+
     //alert(dataId);
 //}
 
