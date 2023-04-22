@@ -65,7 +65,7 @@ main{
     height: 100%;
     margin: 0 auto 2rem;
     padding: 2rem;
-    background-color: rgba(39, 41, 42, 0.333); /Define a cor de fundo do elemento/
+    background-color: rgba(39, 41, 42, 0.333);
     z-index: 97;
 }
 
@@ -79,7 +79,7 @@ main{
     height: 100%;
     margin: 0 auto 2rem;
     padding: 2rem;
-    background-color: rgba(39, 41, 42, 0.333); /Define a cor de fundo do elemento/
+    background-color: rgba(39, 41, 42, 0.333);
     z-index: 95;
 }
 
