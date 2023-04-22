@@ -258,3 +258,14 @@ main{
     transition: 0.3s ease;
   }
 }
+
+@media (max-width: 1180px){
+  /* Estrutura menu navegação*/
+  .menu-navegacao{
+
+    height: 30vh;
+    width: 75%;
+    bottom: 32%;
+
+  }
+}
