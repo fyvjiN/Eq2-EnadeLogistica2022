@@ -58,7 +58,9 @@
                     </div>
                     <div class="paragrafo-pop">
                         <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
+                        <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
                         <div id="chart-container2">
+                            <p>A fonte dos gráficos é de autoria própria.</p>
                             <canvas id="bar-chart2"></canvas>
                         </div>
                     </div>
@@ -76,6 +78,7 @@
                     <div class="paragrafo-pop">
                         <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
                         <div id="chart-container">
+                            <p>A fonte dos gráficos é de autoria própria.</p>
                             <canvas id="bar-chart"></canvas>
                         </div>
                     </div>
@@ -162,7 +165,7 @@
                         </ul>
                     </div>
                     <div class="btn-group-2">
-                        <button class="btn-question" disabled style="cursor: no-drop">Questão Anterior</button>
+                        <button class="btn-question" style="display: none;">Questão Anterior</button>
                         <button class="btn-question" onclick="corrigir()" id="btn-corrigir">Corrigir Questão</button>
                         <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q2_Ad_LOGISTICA_2022.html'">Próxima Questão</button>
                     </div>

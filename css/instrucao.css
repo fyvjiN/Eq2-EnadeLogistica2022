@@ -34,11 +34,11 @@
     border: 2px solid var(--light-blue);
     padding: 0 40px;
     border-radius: 30px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-decoration: none;
     color: var(--color-blue-01);
     background-color: var(--white-01);
-    line-height: 60px;
+    line-height: 70px;
     cursor: pointer;
     transition: 0.3s ease;
     margin-top: 40px;
@@ -47,8 +47,6 @@
   .section-instruction button:hover{
     background-color: var(--light-blue);
     color: var(--white-01);
-    /*transform: scale(10);*/
-    transform: scale(1.05);
   }
 
 

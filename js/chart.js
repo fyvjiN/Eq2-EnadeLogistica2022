@@ -47,7 +47,7 @@ var myChart = new Chart(ctx, {
     datasets: [{
       label: 'Média de respostas por alternativa',
       data: allQuestions[dataId-1],
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
+      backgroundColor: 'rgba(87, 151, 233, 0.5)',
       borderColor: 'rgba(54, 162, 235, 1)',
       borderWidth: 1
     }]
@@ -72,7 +72,7 @@ var myChart = new Chart(ctx, {
     datasets: [{
       label: 'Média de respostas por alternativa',
       data: allQuestions[dataId-1],
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
+      backgroundColor: 'rgba(87, 151, 233, 0.5)',
       borderColor: 'rgba(54, 162, 235, 1)',
       borderWidth: 1
     }]

@@ -76,6 +76,16 @@ function abrirMenuNavegacao() {
 
         // Adiciona o menu à página
         document.body.appendChild(menu);
+
+        // Adiciona um ouvinte de evento para capturar a tecla pressionada
+        document.addEventListener('keydown', function(event) {
+        // Verifica se a tecla pressionada é a tecla "Esc"
+            if (event.keyCode === 27 || (!menu.contains(event.target))) {
+                // Altera o estilo do menu para ocultá-lo
+                menu.style.display = 'none';
+                menuCriado = false;
+            }
+        });
     }
 }
 
@@ -185,5 +195,17 @@ function corrigir() {
     // armazenar resposta selecionada pelo usuário
     if (respSelecionada) {
         localStorage.setItem(window.location.href, respSelecionada.value);
+    }
+}
+
+//Função que habilita as estatisticas de questões na tela da modal
+function mostrarEstatisticas(){
+    var menuEstatisticaErrado = document.querySelector("#chart-container2");
+    var menuEstatisticaCerto = document.querySelector("#chart-container");
+    if (menuEstatisticaErrado) {
+        menuEstatisticaErrado.style.display = 'block';
+    }
+    if (menuEstatisticaCerto) {
+        menuEstatisticaCerto.style.display = 'block';
     }
 }
