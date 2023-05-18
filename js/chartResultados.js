@@ -7,7 +7,7 @@ var ctx = document.getElementById('bar-chart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['Questõe Não Respondidas', 'Questões Respondidas'],
+    labels: ['Questões Não Respondidas', 'Questões Respondidas'],
     datasets: [{
       label: 'Índice de questões respondidas e não respondidas',
       data: [numNaoRespondido, numRespondido],

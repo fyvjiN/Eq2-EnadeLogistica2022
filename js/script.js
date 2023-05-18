@@ -6,9 +6,9 @@ function closeButton() {
     var popOverlay1 = document.getElementById("pop-overlay1");
     var popOverlay2 = document.getElementById("pop-overlay2")
 
-    if(btn[0]) {
+    if (btn[0]) {
         popOverlay1.style.display = "none";
-    }if(btn[1]) {
+    } if (btn[1]) {
         popOverlay2.style.display = "none";
     }
 }
@@ -17,13 +17,13 @@ var menuCriado = false;
 //Função que constroi o menu de navegação ao apertar o botão menu na página
 function abrirMenuNavegacao() {
     //alert("bungas");
-    if(!menuCriado){
+    if (!menuCriado) {
 
         menuCriado = true;
         const links = [
-            '../question_page/EQ2_Q1_Ab_LOGISTICA_2022.html', 
-            '../question_page/EQ2_Q2_Ad_LOGISTICA_2022.html', 
-            '../question_page/EQ2_Q3_Aa_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q1_Ab_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q2_Ad_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q3_Aa_LOGISTICA_2022.html',
             '../question_page/EQ2_Q4_Ac_LOGISTICA_2022.html',
             '../question_page/EQ2_Q5_Ad_LOGISTICA_2022.html',
             '../question_page/EQ2_Q6_Ae_LOGISTICA_2022.html',
@@ -31,9 +31,9 @@ function abrirMenuNavegacao() {
             '../question_page/EQ2_Q8_Ac_LOGISTICA_2022.html',
             '../question_page/EQ2_Q9_Ac_LOGISTICA_2022.html',
             '../question_page/EQ2_Q10_Ad_LOGISTICA_2022.html',
-            '../question_page/EQ2_Q11_Aa_LOGISTICA_2022.html', 
-            '../question_page/EQ2_Q12_Aa_LOGISTICA_2022.html', 
-            '../question_page/EQ2_Q13_Ad_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q11_Aa_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q12_Aa_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q13_Ad_LOGISTICA_2022.html',
             '../question_page/EQ2_Q14_Ab_LOGISTICA_2022.html',
             '../question_page/EQ2_Q15_Ae_LOGISTICA_2022.html',
             '../question_page/EQ2_Q16_Ac_LOGISTICA_2022.html',
@@ -41,9 +41,9 @@ function abrirMenuNavegacao() {
             '../question_page/EQ2_Q18_Ac_LOGISTICA_2022.html',
             '../question_page/EQ2_Q19_Ab_LOGISTICA_2022.html',
             '../question_page/EQ2_Q20_Ab_LOGISTICA_2022.html',
-            '../question_page/EQ2_Q21_Ae_LOGISTICA_2022.html', 
-            '../question_page/EQ2_Q22_Ac_LOGISTICA_2022.html', 
-            '../question_page/EQ2_Q23_Ac_LOGISTICA_2022.html', 
+            '../question_page/EQ2_Q21_Ae_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q22_Ac_LOGISTICA_2022.html',
+            '../question_page/EQ2_Q23_Ac_LOGISTICA_2022.html',
             '../question_page/EQ2_Q24_Ad_LOGISTICA_2022.html',
             '../question_page/EQ2_Q25_Ae_LOGISTICA_2022.html',
             '../question_page/EQ2_Q26_Ad_LOGISTICA_2022.html',
@@ -61,52 +61,51 @@ function abrirMenuNavegacao() {
         const menu = document.createElement('div');
         menu.classList.add('menu-navegacao');
         const lista = document.createElement('ul');
-      
+
         for (let i = 0; i < links.length; i++) {
-          const item = document.createElement('li');
-          const link = document.createElement('a');
-          link.href = links[i];
-          link.textContent = (i + 1).toString(); // use i + 1 para criar os números de menu sequenciais
-          item.appendChild(link);
-          lista.appendChild(item);
+            const item = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = links[i];
+            link.textContent = (i + 1).toString(); // use i + 1 para criar os números de menu sequenciais
+            item.appendChild(link);
+            lista.appendChild(item);
         }
-    
+
         // Adiciona a lista ao menu
         menu.appendChild(lista);
-    
+
         // Adiciona o menu à página
         document.body.appendChild(menu);
     }
 }
 
+// Obtem o array de respostas armazenado no localStorage
 var arrAnswers = JSON.parse(localStorage.getItem("arrAnswers"));
 
+// Obtem a seção atual de questões e o seu respectivo ID
 var sectionQuestion = document.querySelector(".section-question");
 var dataId = sectionQuestion.getAttribute("data-id");
-//for (var i = 0; i < sectionQuestion.length; i++){
-    //var dataId = sectionQuestion.getAttribute('data-id');
-    //sectionQuestion.style.background = "blue";
 
-    //alert(dataId);
-//}
-
-
+// Obtem a quantidade de questões não respondidas, definindo para 35 caso não exista.
 var numNaoRespondido = localStorage.getItem('numNaoRespondido');
-if (numNaoRespondido === null || numNaoRespondido === 0 || numNaoRespondido === -1){
+if (numNaoRespondido === null || numNaoRespondido === 0 || numNaoRespondido === -1) {
     numNaoRespondido = 35;
     console.log(numNaoRespondido);
 }
 
+// Obtem a quantidade de questões erradas, definindo para 0 caso não exista uma resposta errada
 var numErro = localStorage.getItem('numErro');
 if (numErro === null || numErro === 0) {
     numErro = 0;
-  }
+}
 
+// Obtem a quantidade de questões certas, definindo para 0 caso não exista uma resposta certa
 var numAcerto = localStorage.getItem('numAcerto');
 if (numAcerto === null || numAcerto === 0) {
     numAcerto = 0;
-  }
+}
 
+// Obtem a resposta armazenada pelo usuário e, caso já exista uma resposta marcada, marca a opção selecionada, desabilita todas as opções e desabilita o botão corrigir
 var respostaArmazenada = localStorage.getItem(window.location.href);
 if (respostaArmazenada) {
     const inputResposta = document.querySelector(`input[name=resposta][value=${respostaArmazenada}]`);
@@ -123,7 +122,7 @@ if (respostaArmazenada) {
 }
 
 //Função que corrige a questão e contabiliza no contador
-function corrigir(){
+function corrigir() {
     console.log(numAcerto);
     console.log('Entrou no corrigir()');
     var radioInputs = document.querySelectorAll('input[name="resposta"]');
@@ -140,7 +139,7 @@ function corrigir(){
         if (input.checked) {
             //alert('entrou no checkedcas');
             console.log(input.value);
-            arrAnswers[dataId-1] = input.value;
+            arrAnswers[dataId - 1] = input.value;
             localStorage.setItem("arrAnswers", JSON.stringify(arrAnswers));
         }
     }
@@ -153,21 +152,22 @@ function corrigir(){
         return;
     }
 
-    if(respSelecionada && respSelecionada.value === respCorreta){
+    if (respSelecionada && respSelecionada.value === respCorreta) {
 
         console.log('Entrou no certo!');
         numAcerto++;
         numNaoRespondido--;
-      
+        //armazena o valor de numNaoRespondido, decrementando seu valor.
         localStorage.setItem('numNaoRespondido', numNaoRespondido);
         //armazena o valor de numAcerto incrementado ou não após o botão corrigir.
         localStorage.setItem('numAcerto', numAcerto);
         document.getElementById("pop-overlay2").style.display = "block";
-        
+
     } else {
         console.log('Entrou no errado!');
         numErro++;
         numNaoRespondido--;
+        //armazena o valor de numNaoRespondido, decrementando seu valor.
         localStorage.setItem('numNaoRespondido', numNaoRespondido);
         //armazena o valor de numAcerto incrementado ou não após o botão corrigir.
         localStorage.setItem('numErro', numErro);
