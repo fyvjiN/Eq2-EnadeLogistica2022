@@ -140,6 +140,7 @@ main{
   background: white;
   text-decoration: none;
   border: 2px solid var(--light-blue);
+  border-radius: 20px;
 }
 
 .close-pop button:hover {
