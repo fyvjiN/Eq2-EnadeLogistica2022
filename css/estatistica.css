@@ -1,5 +1,76 @@
-.conteudo img {
-    padding: 40px;
-    width: 700px;
+:root {
+    --color-blue-01: #071c40;
+    --color-blue02: #05132b;
+    --light-blue: #5797e9;
+    --white-01: #fffefe;
+    --light-gray-01: #f0f1f0;
+    --light-gray-02: #f8f8f8;
 }
 
+main{
+    background-color: var(--white-01);
+    /*padding: 50px 50px;*/
+  }  
+
+#mostrarResultado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+.conteudo img {
+  padding: 40px;
+  width: 700px;
+  display: flex;
+}
+
+.conteudo button{
+    border: 2px solid var(--light-blue);
+    margin: 30px 30px;
+    padding: 0 20px;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    color: var(--color-blue-01);
+    text-decoration: none;
+    background-color: var(--white-01);
+    line-height: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 200px;
+  }
+  
+.conteudo button:hover{
+    background-color: var(--light-blue);
+    color: var(--white-01);
+    /*transform: scale(10);*/
+  }
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+.conteudo h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 40px 0px;
+    text-align: center;
+    color: var(--color-blue-01);
+    text-transform: uppercase;
+  }
+
+.conteudo p {
+    font-size: 1.6rem;
+    margin: 10px 0;
+  }
+
+.section-graficos {
+    padding: 100px 300px;
+}
+
+canvas {
+    background-color: var(--light-gray-01);
+    margin: 100px 0;
+}

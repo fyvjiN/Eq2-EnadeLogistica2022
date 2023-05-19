@@ -71,6 +71,7 @@ main{
     flex-direction: row;
   }
 
-#chart-container{
-  padding: 0 200px;
+
+.chart-container {
+  padding: 100px 0px;
 }

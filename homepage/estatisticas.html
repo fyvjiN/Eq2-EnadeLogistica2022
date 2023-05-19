@@ -24,6 +24,9 @@
         <!--<link rel="stylesheet" type="text/css" href="../css/resetcss.min.css">-->
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/estatistica.css">
+         <!--script para gráficos gerados pelo chart.js-->
+         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     </head>
     <body>
         <header>
@@ -45,11 +48,14 @@
         <main>
             <!-- container que mostra os resultado -->
             <div class="conteudo">
-                <div class="mostrar-resultado">
-                    <h1>Olá! Você chegou na página de resultados finais.<br>Dê uma olhada nos seus acertos e erros:</h1>
+                <div class="mostrarResultado">
+                    <h1>Olá! Você chegou na página de estatísticas!</h1>
                     <img src="../css/images/analytics-amico.png" alt="imagem ilustrativa de pessoas analisando estatísticas.">
                 </div>
-        </div>
+                <div class="section-graficos">
+                    <p>Fonte dos gráficos: Autoria própria.</p>
+                </div>
+            </div>
         </main>
         <footer>
             <div id="footer-content">
@@ -74,5 +80,6 @@
             </div>
         </footer>
         <script src="../js/navbar.js"></script>
+        <script src="../js/estatistica.js"></script>
     </body>
 </html>
