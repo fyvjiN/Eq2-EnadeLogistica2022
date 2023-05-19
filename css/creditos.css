@@ -1,0 +1,31 @@
+main {
+    height: 100vh;
+}
+
+.section-creditos h1{
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: var(--color-blue-01);
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.section-creditos h2{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--color-blue-01);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-creditos p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-creditos {
+    padding: 70px 100px;
+}
+
