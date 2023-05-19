@@ -87,7 +87,7 @@ main{
 /* Configurações do Pop Up - Certo */
 #pop-overlay2 #pop-certo {
   display: block;
-  border-radius: 0px 10px 10px 10px;
+  border-radius: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -95,8 +95,8 @@ main{
   height: 70vh;
   width: 50%;
   bottom: 32%;
-  font-size: 1.6rem;
-  padding: 50px;
+  font-size: 2rem;
+  padding: 30px;
   background-color: var(--color-blue-03);
   color: white;
 }
@@ -108,7 +108,7 @@ main{
 /* Configurações do Pop Up - Errado */
 #pop-overlay1 #pop-errado {
   display: block;
-  border-radius: 0 10px 10px 10px;
+  border-radius: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -116,9 +116,9 @@ main{
   height:70vh;
   width: 50%;
   bottom: 32%;
-  font-size: 1.6rem;
-  padding: 50px;
-  background-color: var(--color-blue02);
+  font-size: 2rem;
+  padding: 30px;
+  background-color: var(--color-blue-03);
   color: white;
 }
 
