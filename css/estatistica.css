@@ -12,7 +12,7 @@ main{
     /*padding: 50px 50px;*/
   }  
 
-#mostrarResultado {
+.mostrarResultado {
     display: flex;
     align-items: center;
     justify-content: center;
