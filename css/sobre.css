@@ -1,54 +1,53 @@
 :root {
-    --color-blue-01: #071c40;
-    --color-blue02: #05132b;
-    --light-blue: #5797e9;
-    --white-01: #fffefe;
-    --light-gray-01: #f0f1f0;
-    --light-gray-02: #f8f8f8;
+  --color-blue-01: #071c40; /* Cor azul 01 */
+  --color-blue02: #05132b; /* Cor azul 02 */
+  --light-blue: #5797e9; /* Cor azul claro */
+  --white-01: #fffefe; /* Cor branca */
+  --light-gray-01: #f0f1f0; /* Cor cinza claro 01 */
+  --light-gray-02: #f8f8f8; /* Cor cinza claro 02 */
 }
 
 .section-sobre h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    padding: 40px 0px;
-    text-align: center;
-    color: var(--color-blue-01);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-  }
-
-.section-sobre {
-    padding: 30px 50px;
-    background-color: var(--white-01);
-  }
-
-  .section-sobre p {
-    color: var(--color-blue-01);
-    font-size: 1.6rem;
-    text-align: justify;
-  }
-  
-.section-text {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: row;
+  font-size: 4rem; /* Tamanho da fonte */
+  font-weight: 700; /* Define o peso da fonte como negrito */
+  padding: 40px 0px; /* Define o preenchimento interno do título */
+  text-align: center; /* Centraliza o texto */
+  color: var(--color-blue-01); /* Define a cor do texto como azul 01 */
+  display: flex; /* Define um contêiner flexível */
+  align-items: center; /* Centraliza verticalmente os itens */
+  justify-content: center; /* Centraliza horizontalmente os itens */
+  flex-direction: row; /* Define a direção dos itens como horizontal */
 }
 
+.section-sobre {
+  padding: 30px 50px; /* Define o preenchimento interno da seção */
+  background-color: var(--white-01); /* Define a cor de fundo da seção como branco */
+}
 
-@media (max-width: 1180px){
-    .image-sobre img{
-        width: 400px;
-        height: auto;
-    }
-    .section-text{
-        flex-direction: column;
-        align-items: center;
-    }
+.section-sobre p {
+  color: var(--color-blue-01); /* Define a cor do texto como azul 01 */
+  font-size: 1.6rem; /* Tamanho da fonte */
+  text-align: justify; /* Justifica o texto */
+}
 
-    .section-sobre h1 {
-      font-size: 2.5rem;
-    }
+.section-text {
+  display: flex; /* Define um contêiner flexível */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  justify-content: center; /* Centraliza horizontalmente os itens */
+  flex-direction: row; /* Define a direção dos itens como horizontal */
+}
+
+@media (max-width: 1180px) {
+  .image-sobre img {
+      width: 400px; /* Define a largura da imagem */
+      height: auto; /* Define a altura da imagem como automática */
+  }
+  .section-text {
+      flex-direction: column; /* Define a direção dos itens como vertical */
+      align-items: center; /* Centraliza verticalmente os itens */
+  }
+
+  .section-sobre h1 {
+      font-size: 2.5rem; /* Tamanho da fonte */
+  }
 }

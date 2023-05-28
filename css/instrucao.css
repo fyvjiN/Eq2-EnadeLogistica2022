@@ -1,67 +1,73 @@
+/* Define as cores personalizadas */
 :root {
-    --color-blue-01: #071c40;
-    --color-blue02: #05132b;
-    --light-blue: #5797e9;
-    --white-01: #fffefe;
-    --light-gray-01: #f0f1f0;
-    --light-gray-02: #f8f8f8;
+  --color-blue-01: #071c40;
+  --color-blue02: #05132b;
+  --light-blue: #5797e9;
+  --white-01: #fffefe;
+  --light-gray-01: #f0f1f0;
+  --light-gray-02: #f8f8f8;
 }
 
-
+/* Estilo da seção de instruções */
 .section-instruction {
-    padding: 70px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  padding: 70px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
+/* Estilo do texto das instruções */
 .text-instruction p {
-    font-size: 2rem;
-    text-align: justify;
-    color: var(--color-blue-01);
-    padding: 10px 0;
-
+  font-size: 2rem;
+  text-align: justify;
+  color: var(--color-blue-01);
+  padding: 10px 0;
 }
 
+/* Estilo do título da seção de instruções */
 .section-instruction h1 {
-    font-size: 4rem;
-    padding: 30px 30px;
-    color: var(--color-blue-01);
+  font-size: 4rem;
+  padding: 30px 30px;
+  color: var(--color-blue-01);
 }
 
-.section-instruction button{
-    border: 2px solid var(--light-blue);
-    padding: 0 40px;
-    border-radius: 30px;
-    font-size: 2rem;
-    text-decoration: none;
-    color: var(--color-blue-01);
-    background-color: var(--white-01);
-    line-height: 70px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-top: 40px;
+/* Estilo do botão da seção de instruções */
+.section-instruction button {
+  border: 2px solid var(--light-blue);
+  padding: 0 40px;
+  border-radius: 30px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-blue-01);
+  background-color: var(--white-01);
+  line-height: 70px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 40px;
+}
+
+/* Estilo do botão da seção de instruções no hover */
+.section-instruction button:hover {
+  background-color: var(--light-blue);
+  color: var(--white-01);
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 1180px) {
+  /* Estilo do texto das instruções em dispositivos móveis */
+  .text-instruction p {
+      font-size: 1.6rem;
   }
   
-  .section-instruction button:hover{
-    background-color: var(--light-blue);
-    color: var(--white-01);
+  /* Estilo do título da seção de instruções em dispositivos móveis */
+  .section-instruction h1 {
+      font-size: 2.5rem;
+      padding: 10px 0;
   }
-
-
-  @media (max-width: 1180px) {
-    .text-instruction p {
-        font-size: 1.6rem;
-    }
-    .section-instruction h1 {
-        font-size: 2.5rem;
-        padding: 10px 0;
-      }
-    
-    .section-instruction{
-        padding: 40px 40px;
-    }
-
-
+  
+  /* Ajustes de padding para a seção de instruções em dispositivos móveis */
+  .section-instruction {
+      padding: 40px 40px;
   }
+}

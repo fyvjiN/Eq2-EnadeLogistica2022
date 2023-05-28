@@ -1,31 +1,32 @@
+/*Seleciona a tag main*/
 main {
-    height: 100vh;
+    height: 100vh; /*define a altura do elemento*/
 }
-
+/*seleciona o elemento h1 da classe section-creditos*/
 .section-creditos h1{
-    text-transform: uppercase;
-    font-size: 4rem;
-    color: var(--color-blue-01);
-    text-align: center;
-    margin-bottom: 20px;
+    text-transform: uppercase; /*transforma o texto para MAIUSCULO*/
+    font-size: 4rem; /*define o tamanho da fonte*/
+    color: var(--color-blue-01); /*define a cor do texto*/
+    text-align: center; /*centraliza o texto*/
+    margin-bottom: 20px; /*define a margem inferior*/
 
 }
-
+/*seleciona o elemento h2 da classe section-creditos*/
 .section-creditos h2{
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    color: var(--color-blue-01);
-    text-align: center;
-    margin-bottom: 20px;
+    text-transform: uppercase; /*transforma o texto para MAIUSCULO*/
+    font-size: 2.5rem; /*define o tamanho da fonte*/
+    color: var(--color-blue-01); /*define a cor do texto*/
+    text-align: center; /*centraliza o texto*/
+    margin-bottom: 20px; /*define a margem inferior*/
 }
-
+/*seleciona o elemento p da classe section-creditos*/
 .section-creditos p {
-    font-size: 1.6rem;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.6rem; /*define o tamanho da fonte*/
+    text-align: center; /*centraliza o texto*/
+    margin-bottom: 20px; /*define a margem inferior*/
 }
-
+/*seleciona a classe section-creditos*/
 .section-creditos {
-    padding: 70px 100px;
+    padding: 70px 100px; /*define o padding*/
 }
 

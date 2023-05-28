@@ -1,75 +1,83 @@
+/* Seleciona o elemento raiz do documento HTML, <html> */
 :root {
-    --color-blue-01: #071c40;
-    --color-blue02: #05132b;
-    --light-blue: #5797e9;
-    --white-01: #fffefe;
-    --light-gray-01: #f0f1f0;
-    --light-gray-02: #f8f8f8;
+  --color-blue-01: #071c40; /* Define a variável --color-blue-01 */
+  --color-blue02: #05132b; /* Define a variável --color-blue-02 */
+  --light-blue: #5797e9; /* Define a variável --light-blue */
+  --white-01: #fffefe; /* Define a variável --white-01 */
+  --light-gray-01: #f0f1f0; /* Define a variável --light-gray-01 */
+  --light-gray-02: #f8f8f8; /* Define a variável --light-gray-02 */
 }
 
-main{
-    background-color: var(--white-01);
-    /*padding: 50px 50px;*/
-  }  
+/* Seleciona a tag <main> */
+main {
+  background-color: var(--white-01); /* Define a cor de fundo */
+}
 
+/* Seleciona a classe .mostrarResultado */
 .mostrarResultado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+  display: flex; /* Define o display como flex container */
+  align-items: center; /* Alinha os elementos verticalmente ao centro */
+  justify-content: center; /* Alinha os elementos horizontalmente ao centro */
+  flex-direction: column; /* Define a direção dos itens flexíveis */
+}
 
+/* Seleciona a classe .conteudo img */
 .conteudo img {
-  padding: 40px;
-  width: 700px;
+  padding: 40px; /* Define o espaçamento interno */
+  width: 700px; /* Define a largura */
 }
 
-.conteudo button{
-    border: 2px solid var(--light-blue);
-    margin: 30px 30px;
-    padding: 0 20px;
-    border-radius: 30px;
-    font-size: 1.6rem;
-    color: var(--color-blue-01);
-    text-decoration: none;
-    background-color: var(--white-01);
-    line-height: 50px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    width: 200px;
-  }
-  
-.conteudo button:hover{
-    background-color: var(--light-blue);
-    color: var(--white-01);
-    /*transform: scale(10);*/
-  }
+/* Seleciona a classe .conteudo button */
+.conteudo button {
+  border: 2px solid var(--light-blue); /* Define a borda com cor personalizada */
+  margin: 30px 30px; /* Define as margens */
+  padding: 0 20px; /* Define o espaçamento interno */
+  border-radius: 30px; /* Define o raio da borda */
+  font-size: 1.6rem; /* Define o tamanho da fonte */
+  color: var(--color-blue-01); /* Define a cor do texto */
+  text-decoration: none; /* Remove a decoração de link */
+  background-color: var(--white-01); /* Define a cor de fundo */
+  line-height: 50px; /* Define a altura da linha */
+  cursor: pointer; /* Altera o cursor para um ponteiro */
+  transition: 0.3s ease; /* Adiciona uma transição suave */
+  width: 200px; /* Define a largura */
+}
 
+/* Seleciona a classe .conteudo button quando o cursor está sobre ele */
+.conteudo button:hover {
+  background-color: var(--light-blue); /* Define a cor de fundo quando hover */
+  color: var(--white-01); /* Define a cor do texto quando hover */
+}
+
+/* Seleciona a classe .conteudo */
 .conteudo {
-    display: flex;
-    flex-direction: column;
-
-  }
-
-.conteudo h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    padding: 40px 0px;
-    text-align: center;
-    color: var(--color-blue-01);
-    text-transform: uppercase;
-  }
-
-.conteudo p {
-    font-size: 1.6rem;
-    margin: 10px 0;
-  }
-
-.section-graficos {
-    padding: 100px 300px;
+  display: flex; /* Define o display como flex container */
+  flex-direction: column; /* Define a direção dos itens flexíveis */
 }
 
+/* Seleciona a classe .conteudo h1 */
+.conteudo h1 {
+  font-size: 4rem; /* Define o tamanho da fonte */
+  font-weight: 700; /* Define o peso da fonte */
+  padding: 40px 0px; /* Define o espaçamento interno */
+  text-align: center; /* Alinha o texto ao centro */
+  color: var(--color-blue-01); /* Define a cor do texto */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+/* Seleciona a classe .conteudo p */
+.conteudo p {
+  font-size: 1.6rem; /* Define o tamanho da fonte */
+  margin: 10px 0; /* Define as margens */
+}
+
+/* Seleciona a classe .section-graficos */
+.section-graficos {
+  padding: 100px 300px; /* Define o espaçamento interno */
+}
+
+/* Seleciona os elementos <canvas> */
 canvas {
-    background-color: var(--light-gray-01);
-    margin: 100px 0;
+  background-color: var(--light-gray-01); /* Define a cor de fundo */
+  margin: 100px 0; /* Define as margens */
 }

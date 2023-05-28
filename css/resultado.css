@@ -1,77 +1,74 @@
 :root {
-    --color-blue-01: #071c40;
-    --color-blue02: #05132b;
-    --light-blue: #5797e9;
-    --white-01: #fffefe;
-    --light-gray-01: #f0f1f0;
-    --light-gray-02: #f8f8f8;
+  --color-blue-01: #071c40; /* Cor azul 01 */
+  --color-blue02: #05132b; /* Cor azul 02 */
+  --light-blue: #5797e9; /* Cor azul claro */
+  --white-01: #fffefe; /* Cor branca */
+  --light-gray-01: #f0f1f0; /* Cor cinza claro 01 */
+  --light-gray-02: #f8f8f8; /* Cor cinza claro 02 */
 }
 
-main{
-    background-color: var(--white-01);
-    /*padding: 50px 50px;*/
-  }  
+main {
+  background-color: var(--white-01); /* Define a cor de fundo principal como branco */
+}
 
 .conteudo img {
-  padding: 40px;
-  width: 700px;
+  padding: 40px; /* Define o preenchimento interno das imagens */
+  width: 700px; /* Define a largura das imagens */
 }
 
-.conteudo button{
-    border: 2px solid var(--light-blue);
-    margin: 30px 30px;
-    padding: 0 20px;
-    border-radius: 30px;
-    font-size: 1.6rem;
-    color: var(--color-blue-01);
-    text-decoration: none;
-    background-color: var(--white-01);
-    line-height: 50px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    width: 200px;
-  }
-  
-  .conteudo button:hover{
-    background-color: var(--light-blue);
-    color: var(--white-01);
-    /*transform: scale(10);*/
-  }
+.conteudo button {
+  border: 2px solid var(--light-blue); /* Define a borda do botão com a cor azul claro */
+  margin: 30px 30px; /* Define as margens do botão */
+  padding: 0 20px; /* Define o preenchimento interno do botão */
+  border-radius: 30px; /* Define o raio do arredondamento das bordas do botão */
+  font-size: 1.6rem; /* Tamanho da fonte */
+  color: var(--color-blue-01); /* Define a cor do texto do botão */
+  text-decoration: none; /* Remove a decoração de texto do botão */
+  background-color: var(--white-01); /* Define a cor de fundo do botão como branco */
+  line-height: 50px; /* Define a altura da linha de texto do botão */
+  cursor: pointer; /* Define o cursor do mouse como ponteiro */
+  transition: 0.3s ease; /* Define a transição de propriedades durante a mudança de estado */
+  width: 200px; /* Define a largura do botão */
+}
 
-  .conteudo {
-    display: flex;
-    flex-direction: column;
-  }
+.conteudo button:hover {
+  background-color: var(--light-blue); /* Define a cor de fundo do botão ao passar o mouse sobre ele como azul claro */
+  color: var(--white-01); /* Define a cor do texto do botão ao passar o mouse sobre ele como branco */
+}
 
-  .conteudo h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    padding: 40px 0px;
-    text-align: center;
-    color: var(--color-blue-01);
-    text-transform: uppercase;
-  }
+.conteudo {
+  display: flex; /* Define o display como flex */
+  flex-direction: column; /* Define a direção dos itens flexíveis */
+}
 
-  .conteudo p {
-    font-size: 1.6rem;
-    margin: 10px 0;
-  }
+.conteudo h1 {
+  font-size: 4rem; /* Tamanho da fonte */
+  font-weight: 700; /* Define o peso da fonte como negrito */
+  padding: 40px 0px; /* Define o preenchimento interno do título */
+  text-align: center; /* Centraliza o texto */
+  color: var(--color-blue-01); /* Define a cor do texto como azul 01 */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
 
-  #mostrarResultado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+.conteudo p {
+  font-size: 1.6rem; /* Tamanho da fonte */
+  margin: 10px 0; /* Define as margens do parágrafo */
+}
 
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-  }
+#mostrarResultado {
+  display: flex; /* Define o display como flex */
+  align-items: center; /* Alinha os elementos verticalmente ao centro */
+  justify-content: center; /* Alinha os elementos horizontalmente ao centro */
+  flex-direction: column; /* Define a direção dos itens flexíveis */
+}
 
+.button {
+  display: flex; /* Define o display como flex */
+  align-items: center; /* Alinha os elementos verticalmente ao centro */
+  justify-content: center; /* Alinha os elementos horizontalmente ao centro */
+  flex-direction: row; /* Define a direção dos itens flexíveis */
+}
 
 #chart-container {
-  padding: 50px 200px;
+  padding: 50px 200px; /* Define o preenchimento interno do contêiner do gráfico */
 }
