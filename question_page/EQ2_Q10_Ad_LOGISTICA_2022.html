@@ -46,43 +46,43 @@
         </nav>
     </header>
     <main>
-        <div id="pop-overlay1">
+"             <!--POPUP ERRADO-->
+            <div id="pop-overlay1">
             <div id="pop-errado">
                 <div class="close-pop">
                     <button type="button" class="close-pop" onclick="closeButton()">X</button>
                 </div>
-                <div class="imagem-pop">
-                    <!--<img src="img/errado.png" width="30px" alt="">-->
-                </div>
                 <div class="paragrafo-pop">
                     <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
+                    <p class="correct-txt">A resposta correta é: <b>B) I e III.</b></p>
                     <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
                     <div id="chart-container2">
+                        <p>Quantidade de respostas por alternativa</p>
                         <canvas id="bar-chart2"></canvas>
-                        <p>Fonte do gráfico: Autoria própria.</p>
+                        <p>Fonte do gráfico: Os autores.</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!--POPUP CERTO-->
         <div id="pop-overlay2">
             <div id="pop-certo">
                 <div class="close-pop">
                     <button type="button" class="close-pop" onclick="closeButton()">X</button>
                 </div>
-                <div class="imagem-pop">
-                    <!--<img src="img/certo.png" width="30px" alt="">-->
-                </div>
                 <div class="paragrafo-pop">
                     <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
+                    <p class="correct-txt">A resposta correta é: <b>B) I e III.</b></p>
                     <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
                     <div id="chart-container">
+                        <p>Quantidade de respostas por alternativa</p>
                         <canvas id="bar-chart"></canvas>
-                        <p>Fonte do gráfico: Autoria própria.</p>
+                        <p>Fonte do gráfico: Os autores.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>"
         <!--<form>-->
             <div class="section-question" data-id="10">
                 <h1>Questão 10/35</h1>

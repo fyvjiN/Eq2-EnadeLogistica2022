@@ -72,6 +72,6 @@ main{
   }
 
 
-.chart-container {
-  padding: 100px 0px;
+#chart-container {
+  padding: 50px 200px;
 }
