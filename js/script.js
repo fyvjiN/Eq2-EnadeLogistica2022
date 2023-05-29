@@ -16,7 +16,6 @@ function closeButton() {
 var menuCriado = false;
 //Função que constroi o menu de navegação ao apertar o botão menu na página
 function abrirMenuNavegacao() {
-    //alert("bungas");
     if (!menuCriado) {
 
         menuCriado = true;
@@ -143,11 +142,9 @@ function corrigir() {
         if (input.dataset.correct === "true") {
             console.log('pegou o dataset correto');
             respCorreta = input.value;
-            //break;
         }
 
         if (input.checked) {
-            //alert('entrou no checkedcas');
             console.log(input.value);
             arrAnswers[dataId - 1] = input.value;
             localStorage.setItem("arrAnswers", JSON.stringify(arrAnswers));

@@ -1,73 +1,73 @@
 /* Define as cores personalizadas */
 :root {
-  --color-blue-01: #071c40;
-  --color-blue02: #05132b;
-  --light-blue: #5797e9;
-  --white-01: #fffefe;
-  --light-gray-01: #f0f1f0;
-  --light-gray-02: #f8f8f8;
+  --color-blue-01: #071c40; /* Cor azul 01 */
+  --color-blue02: #05132b; /* Cor azul 02 */
+  --light-blue: #5797e9; /* Cor azul clara */
+  --white-01: #fffefe; /* Branco 01 */
+  --light-gray-01: #f0f1f0; /* Cinza claro 01 */
+  --light-gray-02: #f8f8f8; /* Cinza claro 02 */
 }
 
 /* Estilo da seção de instruções */
 .section-instruction {
-  padding: 70px 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  padding: 70px 80px; /* Preenchimento interno de 70 pixels no topo e na base, 80 pixels nos lados direito e esquerdo */
+  display: flex; /* Exibir como flex */
+  align-items: center; /* Alinhar os itens ao centro verticalmente */
+  justify-content: center; /* Alinhar os itens ao centro horizontalmente */
+  flex-direction: column; /* Direção de coluna dos elementos flex */
 }
 
 /* Estilo do texto das instruções */
 .text-instruction p {
-  font-size: 2rem;
-  text-align: justify;
-  color: var(--color-blue-01);
-  padding: 10px 0;
+  font-size: 2rem; /* Tamanho da fonte de 2 rem */
+  text-align: justify; /* Alinhar o texto justificado */
+  color: var(--color-blue-01); /* Cor do texto definida pela variável --color-blue-01 */
+  padding: 10px 0; /* Preenchimento interno de 10 pixels no topo e na base, 0 pixels nos lados direito e esquerdo */
 }
 
 /* Estilo do título da seção de instruções */
 .section-instruction h1 {
-  font-size: 4rem;
-  padding: 30px 30px;
-  color: var(--color-blue-01);
+  font-size: 4rem; /* Tamanho da fonte de 4 rem */
+  padding: 30px 30px; /* Preenchimento interno de 30 pixels no topo e na base, 30 pixels nos lados direito e esquerdo */
+  color: var(--color-blue-01); /* Cor do texto definida pela variável --color-blue-01 */
 }
 
 /* Estilo do botão da seção de instruções */
 .section-instruction button {
-  border: 2px solid var(--light-blue);
-  padding: 0 40px;
-  border-radius: 30px;
-  font-size: 2rem;
-  text-decoration: none;
-  color: var(--color-blue-01);
-  background-color: var(--white-01);
-  line-height: 70px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  margin-top: 40px;
+  border: 2px solid var(--light-blue); /* Borda de 2 pixels sólidos com cor definida pela variável --light-blue */
+  padding: 0 40px; /* Preenchimento interno de 0 pixels no topo e na base, 40 pixels nos lados direito e esquerdo */
+  border-radius: 30px; /* Raio do arredondamento das bordas de 30 pixels */
+  font-size: 2rem; /* Tamanho da fonte de 2 rem */
+  text-decoration: none; /* Sem decoração de texto */
+  color: var(--color-blue-01); /* Cor do texto definida pela variável --color-blue-01 */
+  background-color: var(--white-01); /* Cor de fundo definida pela variável --white-01 */
+  line-height: 70px; /* Altura da linha de 70 pixels */
+  cursor: pointer; /* Cursor do mouse como ponteiro */
+  transition: 0.3s ease; /* Transição com duração de 0.3 segundos com efeito de suavização */
+  margin-top: 40px; /* Margem superior de 40 pixels */
 }
 
 /* Estilo do botão da seção de instruções no hover */
 .section-instruction button:hover {
-  background-color: var(--light-blue);
-  color: var(--white-01);
+  background-color: var(--light-blue); /* Cor de fundo alterada para a cor azul clara */
+  color: var(--white-01); /* Cor do texto alterada para branco */
 }
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 1180px) {
   /* Estilo do texto das instruções em dispositivos móveis */
   .text-instruction p {
-      font-size: 1.6rem;
+    font-size: 1.6rem; /* Tamanho da fonte de 1.6 rem */
   }
   
   /* Estilo do título da seção de instruções em dispositivos móveis */
   .section-instruction h1 {
-      font-size: 2.5rem;
-      padding: 10px 0;
+    font-size: 2.5rem; /* Tamanho da fonte de 2.5 rem */
+    padding: 10px 0; /* Preenchimento interno de 10 pixels no topo e na base, 0 pixels nos lados direito e esquerdo */
   }
   
   /* Ajustes de padding para a seção de instruções em dispositivos móveis */
   .section-instruction {
-      padding: 40px 40px;
+    padding: 40px 40px; /* Preenchimento interno de 40 pixels no topo e na base, 40 pixels nos lados direito e esquerdo */
   }
 }

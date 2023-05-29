@@ -7,7 +7,6 @@ function resultado(){
     console.log('abriu resultado!!!1');
 
     if (numAcerto == null){
-        // document.getElementById("escolha").innerHTML = `Suas respostas: ${quebrar}`
         document.getElementById("nao-respondidas").innerHTML = `Seus acertos: <b>0</b> / 35`;
     } else {
         document.getElementById("acertos").innerHTML = `Seus acertos: <b>${numAcerto}</b> / 35`; // Aqui ira apresentar o resultado mostrando a quantidade de acertos
