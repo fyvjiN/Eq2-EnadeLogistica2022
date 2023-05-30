@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
+    <head> <!--METADADOS DA PÁGINA-->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Enade - Tecnologia em Logística 2022</title>
-        <!-- icone usado no-->
+        <!-- icone usado na guia do navegador-->
         <Link Rel="Icon" Href="http://enade.inep.gov.br/enade/favicon.ico" />
-        <!-- ícons facebook zap instagram -->
+        <!-- ícons facebook whatsapp instagram -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
             integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,40 +25,40 @@
         <!--script para gráficos gerados pelo chart.js-->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
-
+    <!--CONTEÚDO DA PÁGINA-->
     <body>
         <!--MENU INICIAL-->
         <header>
-            <nav>
-                <!--lOGO INEP-->
+            <nav> <!--ABERTURA DA TAG "NAV" PARA INDICAR O INICIO DA BARRA DE NAVEGAÇÃO-->
+                <!--lOGO INEP COM HYPERLINK-->
                 <div class="logo"><a href="https://www.gov.br/inep/pt-br" target="_blank"><img src="../css/images/inep-br-logo.png" width="100"></a> <a href="https://enade.inep.gov.br/enade" target="_blank">Enade</a></div>
-                <!--MENU HAMBURGUER-->
+                <!--MENU ESTILO HAMBURGUER PARA MOBILE-->
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-                <!--MENU DE LISTA-->
+                <!--MENU DE LISTA CONTENDO OS LINKS DA BARRA DE NAVEGAÇÃO-->
                 <ul class="nav-list">
-                    <li><a href="../homepage/index.html">Início</a></li>
-                    <li><a href="../homepage/instrucao.html">Iniciar Simulado</a></li>
-                    <li><a href="../homepage/sobre.html">Sobre</a></li>
-                    <li><a href="../homepage/creditos.html">Créditos</a></li>
+                    <li><a href="../homepage/index.html">Início</a></li> <!--vai para página inicial do site-->
+                    <li><a href="../homepage/instrucao.html">Iniciar Simulado</a></li> <!--vai para página de instruções do simulado-->
+                    <li><a href="../homepage/sobre.html">Sobre</a></li> <!--página sobre-->
+                    <li><a href="../homepage/creditos.html">Créditos</a></li> <!--página créditos-->
                 </ul>
             </nav>
         </header>
         <!--CONTEUDO PRINCIPAL-->
         <main>
-            <!--POPUP ERRADO-->
+            <!--POP-UP ERRADO-->
             <div id="pop-overlay1">
                 <div id="pop-errado">
                     <div class="close-pop">
-                        <button type="button" class="close-pop" onclick="closeButton()">X</button>
+                        <button type="button" class="close-pop" onclick="closeButton()">X</button> <!--chama a função "closeButton" ao apertar o botão "X", assim fechando o pop-up-->
                     </div>
                     <div class="paragrafo-pop">
                         <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
                         <p class="correct-txt">A resposta correta é: <b>B) I e III.</b></p>
-                        <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
+                        <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button> <!--chama a função "mostrarEstatisticas" ao clicar no botão "Estatísticas" abrindo os gráficos-->
                         <div id="chart-container2">
                             <p>Quantidade de respostas por alternativa</p>
                             <canvas id="bar-chart2"></canvas>
@@ -72,12 +72,12 @@
             <div id="pop-overlay2">
                 <div id="pop-certo">
                     <div class="close-pop">
-                        <button type="button" class="close-pop" onclick="closeButton()">X</button>
+                        <button type="button" class="close-pop" onclick="closeButton()">X</button> <!--chama a função "closeButton" ao apertar o botão "X", assim fechando o pop-up-->
                     </div>
                     <div class="paragrafo-pop">
                         <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
                         <p class="correct-txt">A resposta correta é: <b>B) I e III.</b></p>
-                        <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
+                        <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button> <!--chama a função "mostrarEstatisticas" ao clicar no botão "Estatísticas" abrindo os gráficos-->
                         <div id="chart-container">
                             <p>Quantidade de respostas por alternativa</p>
                             <canvas id="bar-chart"></canvas>
@@ -86,13 +86,13 @@
                     </div>
                 </div>
             </div>
-            <!--CORPO DA QUESTAO-->
+            <!--SEÇÃO DA QUESTÃO-->
                 <div class="section-question" data-id="1">
                     <h1>Questão 1/35</h1>
                     <!--BOTOES ABRIR MENU E FINALIZAR PROVA-->
                     <div class="btn-group-1">
-                        <button class="btn-question" onclick="abrirMenuNavegacao()">Menu</button>
-                        <button class="btn-question" onclick="window.location.href='../homepage/resultado.html'" id="btn-finalizar">Finalizar Prova</button>
+                        <button class="btn-question" onclick="abrirMenuNavegacao()">Menu</button> <!--chama a função "abrirMenuNavegacao", onde podemos escolher a questão desejada-->
+                        <button class="btn-question" onclick="window.location.href='../homepage/resultado.html'" id="btn-finalizar">Finalizar Prova</button> <!--ao clicar no botão "Finalizar Prova" vamos direto a página de resultados-->
                     </div>
                     <!--CORPO DA QUESTAO-->
                     <div class="body-question">
@@ -148,56 +148,56 @@
                     <div class="respostas">
                         <ul class="ul_respostas">
                             <li>
-                                <input id="altA" type="radio" name="resposta" value="A" required>
+                                <input id="altA" type="radio" name="resposta" value="A" required> <!--alternativa errada-->
                                 <label for="altA">A) I e II.</label>
                             </li>
                             <li>
-                                <input id="altB" type="radio" name="resposta" value="B" data-correct="true" required>
+                                <input id="altB" type="radio" name="resposta" value="B" data-correct="true" required> <!--alternativa correta-->
                                 <label for="altB">B) I e III.</label>
                             </li>
                             <li>
-                                <input id="altC" type="radio" name="resposta" value="C" required>
+                                <input id="altC" type="radio" name="resposta" value="C" required> <!--alternativa errada-->
                                 <label for="altC">C) II e IV.</label>
                             </li>
                             <li>
-                                <input id="altD" type="radio" name="resposta" value="D" required>
+                                <input id="altD" type="radio" name="resposta" value="D" required> <!--alternativa errada-->
                                 <label for="altD">D) I, III e IV.</label>
                             </li>
                             <li>
-                                <input id="altE" type="radio" name="resposta" value="E" required>
+                                <input id="altE" type="radio" name="resposta" value="E" required> <!--alternativa errada-->
                                 <label for="altE">E) II, III e IV.</label>
                             </li>
                         </ul>
                     </div>
                     <!--BOTOES ANTERIOR, CORRIGIR E PROXIMA QUESTAO-->
                     <div class="btn-group-2">
-                        <button class="btn-question" style="display: none;">Questão Anterior</button>
-                        <button class="btn-question" onclick="corrigir()" id="btn-corrigir">Corrigir Questão</button>
-                        <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q2_Ad_LOGISTICA_2022.html'">Próxima Questão</button>
+                        <button class="btn-question" style="display: none;">Questão Anterior</button> <!--botão "Questão Anterior" que leva a questão antecedente, porém não é mostrado na primeira questão-->
+                        <button class="btn-question" onclick="corrigir()" id="btn-corrigir">Corrigir Questão</button> <!--ao clicar no botão "Corrigir Questão" a função "corrigir" é chamada, realizando a correção e levando ao "POP-UP ERRADO" caso tenha respondido incorretamente ou ao "POP-UP CERTO" se respondeu corrretamente-->    
+                        <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q2_Ad_LOGISTICA_2022.html'">Próxima Questão</button> <!--botão "Próxima Questão" leva a próxima questão do simulado-->
                     </div>
                 </div>
         </main>
         <!--RODAPÉ-->
         <footer>
-            <div id="footer-content">
+            <div id="footer-content"> <!--LOGOS DO RODAPÉ COM HYPERLINK-->
                 <div id="footer-logos">
                     <ul class="footer-list">
-                        <li class="footer-item"><a href="http://www.fateccarapicuiba.edu.br/" target="_blank" class="footer-link"><img
-                                    src="../css/images/fatec-carapicuiba-logo.png" width="100"></a></li>
+                        <li class="footer-item"><a href="http://www.fateccarapicuiba.edu.br/" target="_blank" class="footer-link"><img 
+                                    src="../css/images/fatec-carapicuiba-logo.png" width="100"></a></li> <!--logo Fatec Carapicuiba-->
                         <li class="footer-item"><a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" target="_blank" class="footer-link"><img
-                                    src="../css/images/ads-white-logo.png" width="130"></a></li>
+                                    src="../css/images/ads-white-logo.png" width="130"></a></li> <!--logo Ads-->
                         <li class="footer-item"><a href="https://www.cps.sp.gov.br/" target="_blank" class="footer-link"><img
-                                    src="../css/images/cps-white-logo.png" width="100"></a></li>
+                                    src="../css/images/cps-white-logo.png" width="100"></a></li> <!--logo do Centro Paula Souza-->
                         <li class="footer-item"><a href="https://www.gov.br/inep/pt-br"
-                                target="_blank" class="footer-link"><img src="../css/images/logo-inep-white.png" width="100"></a>
-                        </li>
+                                target="_blank" class="footer-link"><img src="../css/images/logo-inep-white.png" width="100"></a> <!--logo do Inep-->
+                        </li> 
                         <li class="footer-item"><a href="https://enade.inep.gov.br/enade" target="_blank" class="footer-link"><img
-                                    src="../css/images/enade-white-logo.png" width="140"></a></li>
+                                    src="../css/images/enade-white-logo.png" width="140"></a></li> <!--logo do Enade-->
                     </ul>
                 </div>
             </div>
-            <div id="footer-copyright">
-                Todos os direitos reservados<b> &#169 2023 FATEC - Carapicuíba</b>
+            <div id="footer-copyright"> <!--declaracao de direitos autorais da pagina-->
+                Todos os direitos reservados<b> &#169 2023 FATEC - Carapicuíba</b> 
             </div>
         </footer>
         <!--SCRIPTS DA PÁGINA NO FINAL, SERÃO INICIADAS APÓS O CONTEUDO DA PAGINA SER CARREGADO-->
