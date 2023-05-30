@@ -1,3 +1,4 @@
+// Matriz contendo as médias de respostas para cada pergunta
 var dados = [
 	[0.39,0.18,0.22,0.06,0.15],
 	[0.61,0.06,0.21,0.07,0.05],
@@ -39,30 +40,27 @@ var dados = [
   const sectionGraficos = document.querySelector('.section-graficos');
   
   for (let i = 0; i < dados.length; i++) {
-    const chartContainer = document.createElement('div');
-    chartContainer.classList.add('chart-container');
-    
-    const canvas = document.createElement('canvas');
-    chartContainer.appendChild(canvas);
-    
-    sectionGraficos.appendChild(chartContainer);
-    
-    new Chart(canvas, {
-        type: 'bar', // ou o tipo de gráfico desejado
-        data: {
-          labels: ['A', 'B', 'C', 'D', 'E'],
-          datasets: [
-            {
-              label: `Questão ${i + 1}`,
-              data: dados[i],
-              backgroundColor: 'rgba(0, 123, 255, 0.5)',
-            },
-          ],
-        },
-        options: {
-          //responsive: true, // torna o gráfico responsivo
-          //maintainAspectRatio: false, // permite que o gráfico se ajuste ao tamanho do contêiner
-          // outras configurações opcionais do gráfico
-        },
-      });
-    }
+	const chartContainer = document.createElement('div');
+	chartContainer.classList.add('chart-container');
+  
+	const canvas = document.createElement('canvas');
+	chartContainer.appendChild(canvas);
+  
+	sectionGraficos.appendChild(chartContainer);
+  
+	new Chart(canvas, {
+	  type: 'bar',
+	  data: {
+		labels: ['A', 'B', 'C', 'D', 'E'],
+		datasets: [{
+		  label: `Questão ${i + 1}`,
+		  data: dados[i],
+		  backgroundColor: 'rgba(0, 123, 255, 0.5)',
+		}],
+	  },
+	  options: {
+		// Outras configurações opcionais do gráfico podem ser adicionadas aqui
+	  },
+	});
+  }
+  

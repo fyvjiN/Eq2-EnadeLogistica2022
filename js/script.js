@@ -197,11 +197,15 @@ function corrigir() {
 
 //Função que habilita as estatisticas de questões na tela da modal
 function mostrarEstatisticas(){
+    // Seleciona o elemento HTML com o id "#chart-container2"
     var menuEstatisticaErrado = document.querySelector("#chart-container2");
+    // Seleciona o elemento HTML com o id "#chart-container"
     var menuEstatisticaCerto = document.querySelector("#chart-container");
+    //Aciona o display block para o menu Errado
     if (menuEstatisticaErrado) {
         menuEstatisticaErrado.style.display = 'block';
     }
+    //Aciona o display block para o menu Certo
     if (menuEstatisticaCerto) {
         menuEstatisticaCerto.style.display = 'block';
     }

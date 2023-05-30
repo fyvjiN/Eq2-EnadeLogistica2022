@@ -1,6 +1,10 @@
+// Seleciona o elemento HTML com a classe "section-question"
 var sectionQuestion = document.querySelector(".section-question");
+
+// Obtém o valor do atributo "data-id" do elemento selecionado
 var dataId = sectionQuestion.getAttribute("data-id");
 
+// Matriz contendo as médias de respostas para cada pergunta
 var allQuestions = [
 	[0.39,0.18,0.22,0.06,0.15],
 	[0.61,0.06,0.21,0.07,0.05],
@@ -39,7 +43,10 @@ var allQuestions = [
 	[0.45,0.1,0.07,0.3,0.28]
 ]
 
+// Obtém o contexto do elemento de gráfico de barras com o ID "bar-chart"
 var ctx = document.getElementById('bar-chart').getContext('2d');
+
+// Cria um novo gráfico de barras usando o Chart.js
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -64,7 +71,10 @@ var myChart = new Chart(ctx, {
   }
 });
 
+// Obtém o contexto do elemento de gráfico de barras com o ID "bar-chart2"
 var ctx = document.getElementById('bar-chart2').getContext('2d');
+
+// Cria um novo gráfico de barras usando o Chart.js
 var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -88,4 +98,3 @@ var myChart = new Chart(ctx, {
     }
   }
 });
-
