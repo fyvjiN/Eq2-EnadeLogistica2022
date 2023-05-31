@@ -1,17 +1,23 @@
+<!--Doctype informa a versão do html para o browser-->
 <!DOCTYPE html>
+<!--Inicia a tag html além de definir o idioma da página-->
 <html lang="pt-br">
+<!--Tag head informando os metadados do site-->
     <head>
+        <!--Define que a tabela de caracteres UTF-8 sera utilizada no site-->
         <meta charset="UTF-8">
+        <!--Tag http-equiv capaz de fornecer suporte para navegadores mais antigos vide Internet Explorer-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Tag capaz de controlar a proporção da página em diferentes dispositivos (desktop/mobile)-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Define o titulo da pagina, exibida na aba-->
         <title>Enade - Tecnologia em Logística 2022</title>
-        <!-- icone usado no-->
+        <!--Biblioteca de icones usado no site-->
         <Link Rel="Icon" Href="http://enade.inep.gov.br/enade/favicon.ico" />
-        <!-- ícons facebook zap instagram -->
+        <!--Icones do facebook, whatsapp e instagram -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
             integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-
         <!-- Fontes Google -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,42 +30,55 @@
         <!--script para gráficos gerados pelo chart.js-->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
-
+    <!--Tag body, contendo todo o conteudo html da pagina-->
     <body>
-        <!--MENU INICIAL-->
+        <!--header é o menu inicial da pagina-->
         <header>
+            <!--tag semantica do menu inicial-->
             <nav>
-                <!--lOGO INEP-->
+                <!--Aplica as imagens do INEP no menu inicial-->
                 <div class="logo"><a href="https://www.gov.br/inep/pt-br" target="_blank"><img src="../css/images/inep-br-logo.png" width="100"></a> <a href="https://enade.inep.gov.br/enade" target="_blank">Enade</a></div>
-                <!--MENU HAMBURGUER-->
+                <!--cria o menu hamburguer/mobile do menu inicial-->
                 <div class="mobile-menu">
+                    <!--line1,2 e 3 servem para criar o menu hamburguer visualmente-->
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-                <!--MENU DE LISTA-->
+                <!--Cria uma lista nao ordenada contendo os links acessíveis no menu inicial-->
                 <ul class="nav-list">
+                    <!--Redireciona para a pagina inicial-->
                     <li><a href="../homepage/index.html">Início</a></li>
+                    <!--Redireciona para a pagina instrucao-->
                     <li><a href="../homepage/instrucao.html">Iniciar Simulado</a></li>
+                    <!--Redireciona para a pagina sobre-->
                     <li><a href="../homepage/sobre.html">Sobre</a></li>
+                    <!--Redireciona para a pagina creditos-->
                     <li><a href="../homepage/creditos.html">Créditos</a></li>
                 </ul>
             </nav>
         </header>
-        <!--CONTEUDO PRINCIPAL-->
+        <!--A tag main contem o conteudo principal da pagina-->
         <main>
             <!--POPUP ERRADO-->
+            <!--Serve para criar o fundo escuro do popup-->
             <div id="pop-overlay1">
+                <!--Modal do popup errado-->
                 <div id="pop-errado">
                     <div class="close-pop">
+                        <!--Botao que fecha o popup-->
                         <button type="button" class="close-pop" onclick="closeButton()">X</button>
                     </div>
                     <div class="paragrafo-pop">
+                        <!--Paragrafo de status de questao-->
                         <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
+                        <!--Paragrafo de resposta correta-->
                         <p class="correct-txt">A resposta correta é: <b>B) I e III.</b></p>
+                        <!--Botao que mostra o grafico de estatisticas-->
                         <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
                         <div id="chart-container2">
                             <p>Quantidade de respostas por alternativa</p>
+                            <!--Grafico de estatistica gerado por js-->
                             <canvas id="bar-chart2"></canvas>
                             <p>Fonte do gráfico: Os autores.</p>
                         </div>
@@ -68,17 +87,23 @@
             </div>
 
             <!--POPUP CERTO-->
+            <!--Serve para criar o fundo escuro do popup-->
             <div id="pop-overlay2">
                 <div id="pop-certo">
                     <div class="close-pop">
+                        <!--Botao que fecha o popup-->
                         <button type="button" class="close-pop" onclick="closeButton()">X</button>
                     </div>
                     <div class="paragrafo-pop">
+                        <!--Paragrafo de status de questao-->
                         <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
+                        <!--Paragrafo de resposta correta-->
                         <p class="correct-txt">A resposta correta é: <b>B) I e III.</b></p>
+                        <!--Botao que mostra o grafico de estatisticas-->
                         <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
                         <div id="chart-container">
                             <p>Quantidade de respostas por alternativa</p>
+                             <!--Grafico de estatistica gerado por js-->
                             <canvas id="bar-chart"></canvas>
                             <p>Fonte do gráfico: Os autores.</p>
                         </div>
@@ -121,6 +146,7 @@
                         <h2>TEXTO 3</h2>
                         <p>A figura a seguir exemplifica algumas condutas que, segundo Umberto Eco,
                             podem ser consideradas contraditórias aos princípios democráticos</p>
+                            <!--Imagem ilustrativa da questao-->
                             <img src="../css/question_images/Q1/Q1_IM1_M.jpg" alt="tirinha">
                             <blockquote><small>Disponível em: https://www.facebook.com/EditoraRecord/photos. Acesso em: 18 ago. 2022
                             (adaptado).</small></blockquote>
@@ -145,6 +171,7 @@
                     </div>
                     <!--ALTERNATIVAS DA QUESTAO-->
                     <div class="respostas">
+                        <!--Lista nao ordenada contendo os inputs de alternativa da questao, sendo que a correta esta com a propriedade data-correct true-->
                         <ul class="ul_respostas">
                             <li>
                                 <input id="altA" type="radio" name="resposta" value="A" required>
@@ -176,25 +203,32 @@
                     </div>
                 </div>
         </main>
-        <!--RODAPÉ-->
+        <!--A tag footer contem o rodape da pagina-->
         <footer>
+            <!--Define uma lista nao ordenada contendo as imagens do rodape-->
             <div id="footer-content">
                 <div id="footer-logos">
                     <ul class="footer-list">
+                        <!--Redireciona para a pagina da fatec carapicuiba-->
                         <li class="footer-item"><a href="http://www.fateccarapicuiba.edu.br/" target="_blank" class="footer-link"><img
                                     src="../css/images/fatec-carapicuiba-logo.png" width="100"></a></li>
+                        <!--Redireciona para a pagina do curso ads da fatec carapicuiba-->
                         <li class="footer-item"><a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" target="_blank" class="footer-link"><img
                                     src="../css/images/ads-white-logo.png" width="130"></a></li>
+                        <!--Redireciona para a pagina Centro Paula Souza-->
                         <li class="footer-item"><a href="https://www.cps.sp.gov.br/" target="_blank" class="footer-link"><img
                                     src="../css/images/cps-white-logo.png" width="100"></a></li>
+                        <!--Redireciona para a pagina do INEP-->
                         <li class="footer-item"><a href="https://www.gov.br/inep/pt-br"
                                 target="_blank" class="footer-link"><img src="../css/images/logo-inep-white.png" width="100"></a>
                         </li>
+                        <!--Redireciona para a pagina do ENADE-->
                         <li class="footer-item"><a href="https://enade.inep.gov.br/enade" target="_blank" class="footer-link"><img
                                     src="../css/images/enade-white-logo.png" width="140"></a></li>
                     </ul>
                 </div>
             </div>
+            <!--Declaracao de direitos autorais da pagina-->
             <div id="footer-copyright">
                 Todos os direitos reservados<b> &#169 2023 FATEC - Carapicuíba</b>
             </div>

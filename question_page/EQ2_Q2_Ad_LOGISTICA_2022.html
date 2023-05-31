@@ -29,37 +29,55 @@
     <!--script para gráficos gerados pelo chart.js-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
+<!--Tag body, contendo todo o conteudo html da pagina-->
 <body>
+    <!--header é o menu inicial da pagina-->
     <header>
+        <!--tag semantica do menu inicial-->
         <nav>
+            <!--Aplica as imagens do INEP no menu inicial-->
             <div class="logo"><a href="https://www.gov.br/inep/pt-br" target="_blank"><img src="../css/images/inep-br-logo.png" width="100"></a> <a href="https://enade.inep.gov.br/enade" target="_blank">Enade</a></div>
+            <!--cria o menu hamburguer/mobile do menu inicial-->
             <div class="mobile-menu">
+                <!--line1,2 e 3 servem para criar o menu hamburguer visualmente-->
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
+            <!--Cria uma lista nao ordenada contendo os links acessíveis no menu inicial-->
             <ul class="nav-list">
+                <!--Redireciona para a pagina inicial-->
                 <li><a href="../homepage/index.html">Início</a></li>
+                <!--Redireciona para a pagina instrucao-->
                 <li><a href="../homepage/instrucao.html">Iniciar Simulado</a></li>
+                <!--Redireciona para a pagina sobre-->
                 <li><a href="../homepage/sobre.html">Sobre</a></li>
+                <!--Redireciona para a pagina creditos-->
                 <li><a href="../homepage/creditos.html">Créditos</a></li>
             </ul>
         </nav>
     </header>
+    <!--A tag main contem o conteudo principal da pagina-->
     <main>
         <!--POPUP ERRADO-->
+        <!--Serve para criar o fundo escuro do popup-->
         <div id="pop-overlay1">
+            <!--Modal do popup errado-->
             <div id="pop-errado">
                 <div class="close-pop">
+                    <!--Botao que fecha o popup-->
                     <button type="button" class="close-pop" onclick="closeButton()">X</button>
                 </div>
                 <div class="paragrafo-pop">
+                    <!--Paragrafo de status de questao-->
                     <p class="correct-wrong"><b>VOCÊ ERROU A QUESTÃO!</b></p>
+                    <!--Paragrafo de resposta correta-->
                     <p class="correct-txt">A resposta correta é: <b>D) I, II e IV.</b></p>
+                    <!--Botao que mostra o grafico de estatisticas-->
                     <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
                     <div id="chart-container2">
                         <p>Quantidade de respostas por alternativa</p>
+                        <!--Grafico de estatistica gerado por js-->
                         <canvas id="bar-chart2"></canvas>
                         <p>Fonte do gráfico: Os autores.</p>
                     </div>
@@ -68,17 +86,23 @@
         </div>
 
         <!--POPUP CERTO-->
+        <!--Serve para criar o fundo escuro do popup-->
         <div id="pop-overlay2">
             <div id="pop-certo">
                 <div class="close-pop">
+                    <!--Botao que fecha o popup-->
                     <button type="button" class="close-pop" onclick="closeButton()">X</button>
                 </div>
                 <div class="paragrafo-pop">
+                    <!--Paragrafo de status de questao-->
                     <p class="correct-wrong"><b>VOCÊ ACERTOU A QUESTÃO!</b></p>
+                    <!--Paragrafo de resposta correta-->
                     <p class="correct-txt">A resposta correta é: <b>D) I, II e IV.</b></p>
+                    <!--Botao que mostra o grafico de estatisticas-->
                     <button type="button" class="btn-popup" onclick="mostrarEstatisticas()">Estatísticas</button>
                     <div id="chart-container">
                         <p>Quantidade de respostas por alternativa</p>
+                            <!--Grafico de estatistica gerado por js-->
                         <canvas id="bar-chart"></canvas>
                         <p>Fonte do gráfico: Os autores.</p>
                     </div>
@@ -89,10 +113,12 @@
         <!--<form id="form" action="" method="get">-->
             <div class="section-question" data-id="2">
                 <h1>Questão 2/35</h1>
+                <!--BOTOES ABRIR MENU E FINALIZAR PROVA-->
                 <div class="btn-group-1">
                     <button class="btn-question" onclick="abrirMenuNavegacao()">Menu</button>
                     <button class="btn-question" onclick="window.location.href='../homepage/resultado.html'" id="btn-finalizar">Finalizar Prova</button>
                 </div>
+                <!--CORPO DA QUESTAO-->
                 <div class="body-question">
                     <h2>TEXTO 1</h2>
                     <p>Dados do levantamento feito pelo <i>TransgenderEurope</i> (TGEU) mostram que o Brasil permaneceu pelo
@@ -138,7 +164,9 @@
                     </ul>
                     <p>É correto apenas o que se afirma em:</p><br>
                 </div>
+                <!--ALTERNATIVAS DA QUESTAO-->
                 <div class="respostas">
+                    <!--Lista nao ordenada contendo os inputs de alternativa da questao, sendo que a correta esta com a propriedade data-correct true-->
                     <ul class="ul_respostas">
                         <li>
                             <input id="altA" type="radio" name="resposta" value="A" required>
@@ -162,6 +190,7 @@
                         </li>
                     </ul>       
                 </div>
+                <!--BOTOES ANTERIOR, CORRIGIR E PROXIMA QUESTAO-->
                 <div class="btn-group-2">
                     <button class="btn-question" onclick="window.location.href='../question_page/EQ2_Q1_Ab_LOGISTICA_2022.html'">Questão Anterior</button>
                     <button class="btn-question" onclick="corrigir()" id="btn-corrigir">Corrigir Questão</button>
@@ -171,28 +200,37 @@
         <!--</form>-->
         
     </main>
+    <!--A tag footer contem o rodape da pagina-->
     <footer>
+        <!--Define uma lista nao ordenada contendo as imagens do rodape-->
         <div id="footer-content">
             <div id="footer-logos">
                 <ul class="footer-list">
+                    <!--Redireciona para a pagina da fatec carapicuiba-->
                     <li class="footer-item"><a href="http://www.fateccarapicuiba.edu.br/" target="_blank" class="footer-link"><img
                                 src="../css/images/fatec-carapicuiba-logo.png" width="100"></a></li>
+                    <!--Redireciona para a pagina do curso ads da fatec carapicuiba-->
                     <li class="footer-item"><a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/" target="_blank" class="footer-link"><img
                                 src="../css/images/ads-white-logo.png" width="130"></a></li>
+                    <!--Redireciona para a pagina Centro Paula Souza-->
                     <li class="footer-item"><a href="https://www.cps.sp.gov.br/" target="_blank" class="footer-link"><img
                                 src="../css/images/cps-white-logo.png" width="100"></a></li>
+                    <!--Redireciona para a pagina do INEP-->
                     <li class="footer-item"><a href="https://www.gov.br/inep/pt-br"
                             target="_blank" class="footer-link"><img src="../css/images/logo-inep-white.png" width="100"></a>
                     </li>
+                    <!--Redireciona para a pagina do ENADE-->
                     <li class="footer-item"><a href="https://enade.inep.gov.br/enade" target="_blank" class="footer-link"><img
                                 src="../css/images/enade-white-logo.png" width="140"></a></li>
                 </ul>
             </div>
         </div>
+        <!--Declaracao de direitos autorais da pagina-->
         <div id="footer-copyright">
             Todos os direitos reservados<b> &#169 2023 FATEC - Carapicuíba</b>
         </div>
     </footer>
+    <!--SCRIPTS DA PÁGINA NO FINAL, SERÃO INICIADAS APÓS O CONTEUDO DA PAGINA SER CARREGADO-->
     <script src="../js/navbar.js"></script>
     <script src="../js/script.js" type="text/javascript"></script>
     <script src="../js/chart.js"></script>

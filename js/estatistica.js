@@ -35,31 +35,35 @@ var dados = [
 	[0.4,0.29,0.21,0.03,0.07],
 	[0.19,0.38,0.14,0.07,0.21],
 	[0.45,0.1,0.07,0.3,0.28]
-]
+];
   
   const sectionGraficos = document.querySelector('.section-graficos');
   
   for (let i = 0; i < dados.length; i++) {
+	// Cria um elemento div para conter o gráfico
 	const chartContainer = document.createElement('div');
 	chartContainer.classList.add('chart-container');
   
+	// Cria um elemento canvas para desenhar o gráfico
 	const canvas = document.createElement('canvas');
 	chartContainer.appendChild(canvas);
   
+	// Adiciona o contêiner do gráfico à seção de gráficos
 	sectionGraficos.appendChild(chartContainer);
   
+	// Cria um novo gráfico usando Chart.js
 	new Chart(canvas, {
-	  type: 'bar',
+	  type: 'bar', // Define o tipo de gráfico como barras
 	  data: {
-		labels: ['A', 'B', 'C', 'D', 'E'],
+		labels: ['A', 'B', 'C', 'D', 'E'], // Define os rótulos para o eixo x
 		datasets: [{
-		  label: `Questão ${i + 1}`,
-		  data: dados[i],
-		  backgroundColor: 'rgba(0, 123, 255, 0.5)',
+		  label: `Questão ${i + 1}`, // Define o rótulo para a barra
+		  data: dados[i], // Define os dados da barra
+		  backgroundColor: 'rgba(0, 123, 255, 0.5)', // Define a cor de fundo da barra
 		}],
 	  },
 	  options: {
-		// Outras configurações opcionais do gráfico podem ser adicionadas aqui
+		responsive: true, // Define a responsividade do gráfico
 	  },
 	});
   }
