@@ -81,3 +81,10 @@ canvas {
   background-color: var(--light-gray-01); /* Define a cor de fundo */
   margin: 100px 0; /* Define as margens */
 }
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}

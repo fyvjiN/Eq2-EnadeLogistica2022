@@ -65,6 +65,12 @@
                     <!--Imagem ilustrativa da pagina de estatisticas-->
                     <img src="../css/images/analytics-amico.png" alt="imagem ilustrativa de pessoas analisando estatísticas.">
                 </div>
+                <div class="button"> 
+                    <!--funcao reiniciarprova()-->
+                    <button class="btn-prox" onclick="reiniciarProva()">Refazer Simulado</button>
+                    <!--funcao reset()-->
+                    <a href="https://download.inep.gov.br/enade/provas_e_gabaritos/2022_GB_tecnologia_em_logistica.pdf" target="_blank"><button class="btn-prox" onclick="reset()">Gabarito</button></a> 
+                </div>
                 <!--Contem o canvas com os graficos, o codigo e gerado pelo arquivo estatistica.js-->
                 <div class="section-graficos">
                     <p>Fonte dos gráficos: Os autores.</p>
@@ -104,5 +110,6 @@
         <!--scripts que serao aplicados apos o carregamento da pagina-->
         <script src="../js/navbar.js"></script>
         <script src="../js/estatistica.js"></script>
+        <script src="../js/resultado.js" type="text/javascript"></script>
     </body>
 </html>
