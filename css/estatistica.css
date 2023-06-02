@@ -82,6 +82,7 @@ canvas {
   background-color: var(--light-gray-01); /* Define a cor de fundo */
 }
 
+/* Seleciona a classe .button*/
 .button {
   display: flex;
   align-items: center;

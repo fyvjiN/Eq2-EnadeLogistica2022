@@ -62,14 +62,17 @@ var myChart = new Chart(ctx, {
   options: {
     responsive: true,
     scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Quantidade'
         }
-      }]
+      }
     }
   }
 });
+
 
 // Obtém o contexto do elemento de gráfico de barras com o ID "bar-chart2"
 var ctx = document.getElementById('bar-chart2').getContext('2d');
@@ -90,11 +93,14 @@ var myChart = new Chart(ctx, {
   options: {
     responsive: true,
     scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Quantidade'
         }
-      }]
+      }
     }
   }
 });
+
