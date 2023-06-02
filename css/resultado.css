@@ -13,7 +13,7 @@ main {
 
 .conteudo img {
   padding: 40px; /* Define o preenchimento interno das imagens */
-  width: 700px; /* Define a largura das imagens */
+  width: 50rem; /* Define a largura das imagens */
 }
 
 .conteudo button {
@@ -42,7 +42,7 @@ main {
 }
 
 .conteudo h1 {
-  font-size: 4rem; /* Tamanho da fonte */
+  font-size: 3rem; /* Tamanho da fonte */
   font-weight: 700; /* Define o peso da fonte como negrito */
   padding: 40px 0px; /* Define o preenchimento interno do título */
   text-align: center; /* Centraliza o texto */
@@ -70,5 +70,6 @@ main {
 }
 
 #chart-container {
-  padding: 50px 200px; /* Define o preenchimento interno do contêiner do gráfico */
+  width: 600px;
+  margin: 0 auto; /* Define o preenchimento interno do contêiner do gráfico */
 }

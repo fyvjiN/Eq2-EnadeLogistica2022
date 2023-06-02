@@ -24,7 +24,7 @@ main {
 /* Seleciona a classe .conteudo img */
 .conteudo img {
   padding: 40px; /* Define o espaçamento interno */
-  width: 700px; /* Define a largura */
+  width: 40rem; /* Define a largura */
 }
 
 /* Seleciona a classe .conteudo button */
@@ -57,7 +57,7 @@ main {
 
 /* Seleciona a classe .conteudo h1 */
 .conteudo h1 {
-  font-size: 4rem; /* Define o tamanho da fonte */
+  font-size: 3rem; /* Define o tamanho da fonte */
   font-weight: 700; /* Define o peso da fonte */
   padding: 40px 0px; /* Define o espaçamento interno */
   text-align: center; /* Alinha o texto ao centro */
@@ -73,13 +73,13 @@ main {
 
 /* Seleciona a classe .section-graficos */
 .section-graficos {
-  padding: 100px 300px; /* Define o espaçamento interno */
+  width: 600px; /* Define o espaçamento interno */
+  margin: 0 auto;
 }
 
 /* Seleciona os elementos <canvas> */
 canvas {
   background-color: var(--light-gray-01); /* Define a cor de fundo */
-  margin: 100px 0; /* Define as margens */
 }
 
 .button {
