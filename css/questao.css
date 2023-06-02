@@ -24,7 +24,7 @@ width: 35%; /* Largura de 35% da largura da viewport */
 bottom: 32%; /* Distância do elemento em relação à parte inferior */
 z-index: 30; /* Ordem de empilhamento */
 font-size: 1.6rem; /* Tamanho da fonte */
-background-color: var(--color-blue02); /* Cor de fundo */
+background-color: var(--color-blue-03); /* Cor de fundo */
 color: white; /* Cor do texto */
 border-radius: 20px; /* Raio do arredondamento das bordas */
 padding: 20px; /* Espaçamento interno */
